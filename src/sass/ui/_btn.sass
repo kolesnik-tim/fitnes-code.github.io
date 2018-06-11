@@ -10,6 +10,9 @@
   letter-spacing: 1.5px
   font-size: 24px
   margin-left: 10px
+  font-style: normal
+  position: relative
+  transition: all 0.5s
   i
     transform: skewX(15deg)
     font-style: normal
@@ -17,7 +20,37 @@
     border: solid 2px $apple
     color: $apple
     width: 360px
+    background: none
+    overflow: hidden
+    &:before
+      content: ''
+      z-index: -1
+      width: 100%
+      height: 100%
+      background: $apple
+      position: absolute
+      top: 0
+      left: 0
+      transform: scaleX(0)
+      border-top-left-radius: 20px
+      border-bottom-right-radius: 20px
+      transform-origin: 0% 0%
+      transition-property: transform
+      transition: all 0.9s
+    &:hover
+      color: $white
+      &:before
+        transform: scale(1)
+    &:active
+      border: 2px solid $grass
+      &:before
+        background: $grass
   &-secondary
     border: solid 2px $white
     color: $white
-    width: 100%
+    width: 90%
+    &:hover
+      background: $white-20
+    &:active
+      background: $white
+      color: $apple

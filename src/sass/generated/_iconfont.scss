@@ -9,8 +9,15 @@
   font-style: normal;
 }
 
-$icon-left: "\EA01";
-$icon-menu-open: "\EA02";
+$icon-checkmark: "\EA01";
+$icon-fb-copy: "\EA02";
+$icon-instagram-copy-2: "\EA03";
+$icon-left: "\EA04";
+$icon-menu-open: "\EA05";
+$icon-ok-copy: "\EA06";
+$icon-page-1: "\EA07";
+$icon-vk-copy: "\EA08";
+$icon-youtube-copy: "\EA09";
 
 
 %icon {
@@ -29,5 +36,12 @@ $icon-menu-open: "\EA02";
   display: inline-block;
 }
 
+.icon-checkmark:before { content: $icon-checkmark; }
+.icon-fb-copy:before { content: $icon-fb-copy; }
+.icon-instagram-copy-2:before { content: $icon-instagram-copy-2; }
 .icon-left:before { content: $icon-left; }
 .icon-menu-open:before { content: $icon-menu-open; }
+.icon-ok-copy:before { content: $icon-ok-copy; }
+.icon-page-1:before { content: $icon-page-1; }
+.icon-vk-copy:before { content: $icon-vk-copy; }
+.icon-youtube-copy:before { content: $icon-youtube-copy; }

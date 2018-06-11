@@ -1,0 +1,62 @@
+.navigation
+  position: fixed
+  z-index: 3
+  top: 58%
+  transform: translate(0, -50%)
+  right: 0
+  p
+    transform: rotate(-90deg)
+    font-size: 12px
+    font-weight: normal
+    font-style: normal
+    line-height: 2.17
+    letter-spacing: 0.4px
+    color: $pale-olive
+    position: absolute
+    top: -80px
+    right: 4px
+  ul
+    display: flex
+    flex-direction: column
+    li
+      position: relative
+      padding-right: 30px
+      a
+        visibility: hidden
+        color: $white
+        font-size: 12px
+        font-weight: normal
+        font-style: normal
+        opacity: 0
+        transition: all 0.3s
+      span
+        height: 4px
+        width: 4px
+        background: $pale-olive
+        display: block
+        position: absolute
+        left: 3px
+        bottom: 12px
+        border-radius: 50%
+        transition: all 0.3s
+      &.active
+        span
+          width: 20px
+          height: 2px
+          background: $apple
+          border-radius: 0
+          right: 0
+          left: auto
+        a
+          visibility: visible
+          opacity: 1
+        &.target-1, &.comand-1
+          span
+            background: $white
+  i
+    margin-top: 35px
+    font-size: 80px
+    color: $apple
+    transition: all 0.3s
+    &.target-1.active
+      color: $white 

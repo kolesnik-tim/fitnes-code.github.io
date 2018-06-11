@@ -1,0 +1,64 @@
+.menu
+  ul
+    li
+      a(href="#target") Чего мы хотим
+    li
+      a(href="#space") Простарство клуба
+    li
+      a(href="#code") Клубная карта
+    li
+      a(href="#comand") Тренерский состав
+    li
+      a(href="#contacts") Контакты
+
+.pop-up.modal#pop-up
+  a(href="#" rel="modal:close").close
+    span
+  .pop-up__content
+    h3 Получи свой код доступа
+    form.form
+      input(type="text" placeholder="Имя")
+      input(type="tel" placeholder="Телефон")
+      input(type="submit" value="Получить код").btn.btn-primary
+      .form__checkbox
+        input(type="checkbox" id="checkbox" checked)
+        label(for="checkbox") Нажимая кнопку, Вы подтверждаете, что ознакомлены и согласны с 
+          a(href="#") Соглашением о конфиденциальности персональной информации
+
+.pop-up.modal#pop-up-trainer
+  a(href="#" rel="modal:close").close
+    span
+  .pop-up__content
+    h3 Записаться к тренеру
+    form.form
+      input(type="text" placeholder="Имя")
+      input(type="tel" placeholder="Телефон")
+      input(type="submit" value="Получить код").btn.btn-primary
+      .form__checkbox
+        input(type="checkbox" id="checkbox" checked)
+        label(for="checkbox") Нажимая кнопку, Вы подтверждаете, что ознакомлены и согласны с 
+          a(href="#") Соглашением о конфиденциальности персональной информации
+
+.modal.trainer#pop-up-trainer-2
+  a(href="#" rel="modal:close").close
+    span
+  .trainer__content
+    .row
+      .col-xs-5.center-xs
+        .trainer__img
+          img(src="http://via.placeholder.com/150x150", alt="")
+        .trainer__name
+          h3 Константинов Константин
+          p Персональный тренер
+      .col-xs-6.col-xs-offset-1
+        .trainer__honor
+          img(src="img/acheavment-noun-1214276-cc.svg", alt="")
+          p Финалист всероссийского турнира по бодибилдингу в категории «Men’s Physique & Bikini Star». Призер чемпионата России.
+        .trainer__info
+          ul
+            li Составляет индивидуальные программы питания и тренировок
+            li Помогает сбросить жир и набрать мышечную массу
+            li Знает особенности лечебной физкультуры и реабилитации.
+
+
+
