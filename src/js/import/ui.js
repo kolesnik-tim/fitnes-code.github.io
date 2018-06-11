@@ -11,7 +11,7 @@ $('.menu-open').on('click', function() {
 
 
 //якорь
-$('.menu ul').on('click','a', function(event) {
+$('.menu ul, nav').on('click','a', function(event) {
   var id  = $(this).attr('href'),
     top = $(id).offset().top;
   $('body,html').animate({scrollTop: top - 100}, 1500);
