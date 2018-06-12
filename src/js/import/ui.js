@@ -8,7 +8,6 @@ $('.menu-open').on('click', function() {
   $('.menu').fadeToggle();
   $('.header').toggleClass('bg');
   $(this).toggleClass('active');
-
 });
 
 
@@ -18,6 +17,7 @@ $('.menu ul, nav').on('click','a', function(event) {
     top = $(id).offset().top;
   $('body,html').animate({scrollTop: top - 100}, 1500);
   $('.menu').fadeOut();
+  $('.header').removeClass('bg');
   $('.menu-open').removeClass('active');
 });
 
