@@ -18,7 +18,7 @@ $('.owl-carousel-2').owlCarousel({
   thumbsPrerendered: true
 });
 
-var swiperSpace2 = new Swiper('.swiper-space', {
+var spaceSlider = new Swiper('.swiper-space', {
   slidesPerView: 4,
   spaceBetween: 30,
   // loop: true,
@@ -33,6 +33,7 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
   $(this)
     .addClass('active').siblings().removeClass('active')
     .closest('div.tabs').find('div.tabs__content').fadeOut().removeClass('active').eq($(this).index()).fadeIn();
+  spaceSlider.update();
 });
 
 //team
