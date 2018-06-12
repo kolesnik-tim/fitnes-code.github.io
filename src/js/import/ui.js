@@ -6,7 +6,7 @@ import teamSwiper from './slider';
 $('.menu-open').on('click', function() {
   event.preventDefault();
   $('.menu').fadeToggle();
-  $('.header').toggleClass('active');
+  $('.header').toggleClass('bg');
   $(this).toggleClass('active');
 
 });
@@ -52,11 +52,18 @@ $(window).on('scroll', function() {
 
 
 //modal
-let slidePrev;
-let slideNext;
+teamSwiper.on('slideChange', function() {
+  $('.swiper-team .swiper-slide').removeClass('prev');
+  $('.swiper-team .swiper-slide').removeClass('next');
+  setTimeout(function() {
+    $('.swiper-team .swiper-slide-active').prev().addClass('prev');
+    $('.swiper-team .swiper-slide-active').next().next().next().addClass('next');
+  }, 10);
+  
+});
 $('a[rel]').click(function(event) {
-  slidePrev = $(this).closest('.swiper-slide').siblings('swiper-slide-active').prev();
-  slideNext = $(this).closest('.swiper-slide').siblings('swiper-slide-active').next().next().next();
+  let slidePrev = $(this).closest('.swiper-slide').hasClass('prev');
+  let slideNext = $(this).closest('.swiper-slide').hasClass('next');
   if(slidePrev) {
     teamSwiper.slidePrev();
     return false;
@@ -69,7 +76,4 @@ $('a[rel]').click(function(event) {
   });
   return false;
 });
-$(slidePrev).addClass('opasity');
-$(slideNext).addClass('opasity');
-console.log(slidePrev);
 

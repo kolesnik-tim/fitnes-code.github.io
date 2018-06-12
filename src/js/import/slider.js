@@ -78,5 +78,11 @@ var teamSwiper = new Swiper('.swiper-team', {
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
+  on: {
+    init: function() {
+      $('.swiper-team .swiper-slide-active').prev().addClass('prev');
+      $('.swiper-team .swiper-slide-active').next().next().next().addClass('next');
+    },
+  },
 });
 module.exports = teamSwiper;
