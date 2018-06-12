@@ -59,8 +59,12 @@ teamSwiper.on('slideChange', function() {
     $('.swiper-team .swiper-slide-active').prev().addClass('prev');
     $('.swiper-team .swiper-slide-active').next().next().next().addClass('next');
   }, 10);
-  
 });
+teamSwiper.on('reachBeginning', function() {
+  teamSwiper.update();
+});
+
+
 $('a[rel]').click(function(event) {
   let slidePrev = $(this).closest('.swiper-slide').hasClass('prev');
   let slideNext = $(this).closest('.swiper-slide').hasClass('next');
