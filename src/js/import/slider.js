@@ -10,43 +10,6 @@ var swiperIntro = new Swiper('.swiper-intro', {
 });
 
 //space
-var swiperSpace1 = new Swiper('.swiper-space-1', {
-  slidesPerView: 1,
-});
-
-$('.swiper__tabs__block-1').on('click', function() {
-  swiperSpace1.slideTo(0);
-  active($(this));
-});
-$('.swiper__tabs__block-2').on('click', function() {
-  swiperSpace1.slideTo(1);
-  active($(this));
-});
-$('.swiper__tabs__block-3').on('click', function() {
-  swiperSpace1.slideTo(2);
-  active($(this));
-});
-$('.swiper__tabs__block-4').on('click', function() {
-  swiperSpace1.slideTo(3);
-  active($(this));
-});
-
-swiperSpace1.on('slideChange', function() {
-  if(swiperSpace1.realIndex === 0) {
-    active($('.swiper__tabs__block-1'));
-  } else if(swiperSpace1.realIndex === 1) {
-    active($('.swiper__tabs__block-2'));
-  } else if(swiperSpace1.realIndex === 2) {
-    active($('.swiper__tabs__block-3'));
-  } else if(swiperSpace1.realIndex === 3) {
-    active($('.swiper__tabs__block-4'));
-  }
-});
-
-function active(crr) {
-  $('.swiper__tabs__block').removeClass('active');
-  crr.addClass('active');
-};
 
 
 $('.owl-carousel-2').owlCarousel({
@@ -55,16 +18,22 @@ $('.owl-carousel-2').owlCarousel({
   thumbsPrerendered: true
 });
 
-var swiperSpac2 = new Swiper('.swiper-space', {
+var swiperSpace2 = new Swiper('.swiper-space', {
   slidesPerView: 4,
   spaceBetween: 30,
-  loop: true,
+  // loop: true,
   navigation: {
     nextEl: '.swiper-space-right',
     prevEl: '.swiper-space-left',
   },
 });
 
+//tabs space
+$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+  $(this)
+    .addClass('active').siblings().removeClass('active')
+    .closest('div.tabs').find('div.tabs__content').fadeOut().removeClass('active').eq($(this).index()).fadeIn();
+});
 
 //team
 

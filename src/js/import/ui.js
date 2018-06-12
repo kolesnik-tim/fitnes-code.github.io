@@ -80,4 +80,3 @@ $('a[rel]').click(function(event) {
   });
   return false;
 });
-
