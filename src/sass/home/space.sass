@@ -2,7 +2,6 @@
   padding-top: 100px
   &__slider
     transform: skewX(-5deg) translate(-50%)
-    background: $apple
     border-top-left-radius: 80px
     border-bottom-right-radius: 80px
     height: 700px
@@ -16,18 +15,74 @@
       align-items: center
       height: 100%
       position: relative
-    .owl-thumbs-1
+    .swiper__tabs
       position: absolute
-      left: 140px
+      left: 180px
       top: 70px
-      z-index: 4
-    .owl-carousel-1
+      z-index: 9
+      &__block
+        border-radius: 20px
+        border: solid 2px $white
+        width: 70px
+        height: 70px
+        +center
+        flex-direction: column
+        position: relative
+        margin-bottom: 20px
+        cursor: pointer
+        p
+          font-size: 24px
+          font-weight: 600
+          letter-spacing: 0.8px
+          color: $white
+        span
+          font-size: 12px
+          font-weight: 600
+          color: $white
+          position: absolute
+          bottom: 10px
+          opacity: 0
+          transition: all 0.3s
+        &.active
+          background: $apple
+          border: solid 2px $apple
+          span
+            opacity: 1
+    .swiper-space-1
       height: 100%
-      z-index: 3
-      .owl-stage-outer, .owl-stage, .owl-item, .item
-        width: 100%
-        height: 100%
-    .owl-carousel-2
+      overflow: visible
+      .swiper-slide
+        .container
+          position: relative
+        .swiper-space-left
+          bottom: 65px
+          top: auto
+          left: 100px
+        .swiper-space-right
+          bottom: 65px
+          top: auto
+          transform: rotate(180deg)
+          right: -100px
+        .swiper-space
+          position: absolute
+          bottom: 25px
+          right: 0
+          z-index: 3
+          height: 140px
+          width: 700px
+          .swiper-slide
+            background: none
+            &.active
+              background: rgba($black, 0.5)
+            .swiper-space__img
+              height: 50px
+              img
+                height: 100%
+            p
+              font-family: 'SF Pro Text'
+              font-size: 18px
+              font-weight: normal
+    .owl-carousel-2, .owl-stage-outer, .owl-stage, .owl-item
       width: 100%
       height: 100%
       .item
@@ -35,17 +90,3 @@
         height: 100%
         background-repeat: no-repeat
         background-size: cover
-    .swiper-container
-      position: absolute
-      bottom: 0
-      z-index: 3
-      height: 140px
-      .swiper-slide
-        .swiper-space__img
-          height: 50px
-          img
-            height: 100%
-        p
-          font-family: 'SF Pro Text'
-          font-size: 18px
-          font-weight: normal

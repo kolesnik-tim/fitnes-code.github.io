@@ -4,7 +4,7 @@
   border-top-left-radius: 80px
   border-bottom-right-radius: 80px
   height: 1030px
-  width: 1300px
+  width: 105%
   position: relative
   left: 50%
   &__content
@@ -14,13 +14,24 @@
     height: 100%
   .swiper
     position: relative
+    &-container
+      overflow: visible
+      .swiper-slide-duplicate-prev, .swiper-slide-prev
+        opacity: 0.4
+        h3, p, a.btn
+          opacity: 0
+        .command__block__img
+          width: 150px
+          height: 150px
+          margin-right: -150px
+          margin-top: 30px
+      .swiper-slide-duplicate-prev
+        .command__block__img
+          margin-right: 150px
     &-slide
       display: flex
       flex-direction: column
       align-items: center
-    .swiper-button-prev, .swiper-button-next
-      i
-        color: $black
   &__block
     a
       display: flex
