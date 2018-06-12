@@ -1,6 +1,7 @@
 .header
-  background-image: radial-gradient(circle at 37% -1%, rgba($white, 0.1), rgba($black, 0.1))
-  background-blend-mode: screen
+  background: url('../img/bg_top.png')
+  background-repeat: no-repeat
+  background-size: cover
   position: fixed
   height: 100px
   top: 0
@@ -8,6 +9,9 @@
   display: flex
   align-items: center
   z-index: 11
+  transition: all 0.3s
+  &.active
+    background: url('')
   &__logo
     height: 50px
     img

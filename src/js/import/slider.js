@@ -72,15 +72,11 @@ var swiperSpac2 = new Swiper('.swiper-space', {
 });
 
 
-//command
+//team
 
-var swiper = new Swiper('.swiper-command', {
+var teamSwiper = new Swiper('.swiper-team', {
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
-  navigation: {
-    nextEl: '.swiper-slide-duplicate-prev',
-    prevEl: '.swiper-slide-prev',
-  },
 });
-
+module.exports = teamSwiper;
