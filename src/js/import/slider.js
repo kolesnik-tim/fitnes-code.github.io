@@ -49,12 +49,6 @@ function active(crr) {
 };
 
 
-
-
-
-
-
-
 $('.owl-carousel-2').owlCarousel({
   items:1,
   thumbs: true,
