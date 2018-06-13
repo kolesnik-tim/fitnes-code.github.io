@@ -28,12 +28,10 @@ var spaceSlider = new Swiper('.swiper-space', {
     prevEl: '.swiper-space-left',
   },
   breakpoints: {
-    450: {
-      slidesPerView: 1,
-    },
-    550: {
+    767: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 10,
+      centeredSlides: true,
     },
     1024: {
       slidesPerView: 3,
@@ -74,3 +72,5 @@ var teamSwiper = new Swiper('.swiper-team', {
   }
 });
 module.exports = teamSwiper;
+
+

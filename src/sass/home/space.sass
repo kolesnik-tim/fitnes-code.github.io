@@ -1,5 +1,40 @@
 .space
   padding-top: 100px
+  &__floor
+    a
+      display: block
+      width: 93%
+      margin: 0 auto
+      height: 70px
+      font-size: 24px
+      font-weight: 300
+      font-style: italic
+      letter-spacing: 0.8px
+      color: $apple
+      +center
+      border: 1px solid $apple
+      cursor: pointer
+      text-transform: uppercase
+      transition: all 0.3s
+      &.first
+        border-top-left-radius: 20px
+        border-top-right-radius: 20px
+      &.last
+        border-bottom-left-radius: 20px
+        border-bottom-right-radius: 20px
+    &.active
+      a
+        color: $white
+        background: $apple
+        &.last
+          border-radius: 0
+    &__block
+      height: 330px
+      position: relative
+      display: none
+      overflow: hidden
+      &.visibility
+        display: block 
   &__slider
     transform: skewX(-5deg) translate(-50%)
     border-top-left-radius: 80px
@@ -13,6 +48,13 @@
       transform: none
       left: 0
       width: 100%
+    +r(767)
+      border-radius: 0
+      height: auto
+    &__mobile
+      display: none
+      +r(767)
+        display: block
     &__content
       transform: skewX(5deg)
       display: flex
@@ -21,6 +63,8 @@
       position: relative
       +r(1024)
         transform: none
+      +r(767)
+        display: none
     .tabs
       width: 100%
       height: 100%
@@ -91,11 +135,20 @@
         margin-right: 0
         right: 50%
         transform: translate(50%, 0)
+        overflow: visible
+        bottom: -10px
       .swiper-slide
         background: none
         border-radius: 20px
+        opacity: 0.5
+        &-active
+          opacity: 1
+          p
+            opacity: 1 !important
         &.active
           background: rgba($black, 0.6)
+          +r(767)
+            background: none
         .swiper-space__img
           height: 50px
           img
@@ -104,6 +157,10 @@
           font-family: 'SF Pro Text'
           font-size: 18px
           font-weight: normal
+          +r(767)
+            color: $white
+            opacity: 0
+            padding-top: 10px
     .owl-carousel-2, .owl-stage-outer, .owl-stage, .owl-item
       width: 100%
       height: 100%

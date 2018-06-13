@@ -80,3 +80,22 @@ $('a[rel]').click(function(event) {
   });
   return false;
 });
+
+
+// Сварачивающиеся блоки
+$('.space__floor').click(function() {
+  // $(this).toggleClass("active");
+  if($(this).hasClass('active')) {
+    $(this).removeClass('active');
+    $(this).siblings('.space__floor__block').slideUp();
+  } else
+    active($(this));
+});
+
+
+function active(crr) {
+  $('.space__floor').removeClass('active');
+  $('.space__floor__block').slideUp();
+  crr.addClass('active');
+  crr.next('.space__floor__block').slideDown();
+}
