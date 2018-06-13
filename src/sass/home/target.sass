@@ -7,12 +7,24 @@
   width: 102%
   position: relative
   left: 50%
+  +r(1024)
+    transform: none
+    left: 0
+    height: auto
+    width: 100%
+    padding: 40px 0
   &__content
     transform: skewX(6deg)
     display: flex
     align-items: center
     height: 100%
+    +r(1024)
+      transform: none
   &__block
+    +r(767)
+      +center
+      flex-direction: column
+      margin-bottom: 50px
     &__img
       display: flex
       align-items: center
@@ -32,4 +44,4 @@
       font-style: normal
       line-height: 1.44
       color: $charcoal
-      width: 255px
+      max-width: 255px

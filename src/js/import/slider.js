@@ -27,6 +27,19 @@ var spaceSlider = new Swiper('.swiper-space', {
     nextEl: '.swiper-space-right',
     prevEl: '.swiper-space-left',
   },
+  breakpoints: {
+    450: {
+      slidesPerView: 1,
+    },
+    550: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
 });
 
 //tabs space
@@ -49,5 +62,15 @@ var teamSwiper = new Swiper('.swiper-team', {
       $('.swiper-team .swiper-slide-active').next().next().next().addClass('next');
     },
   },
+  breakpoints: {
+    600: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    900: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    }
+  }
 });
 module.exports = teamSwiper;

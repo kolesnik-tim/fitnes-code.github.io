@@ -16,6 +16,8 @@ body
   width: 100% !important
   max-width: 920px
   box-sizing: border-box
+  +r(1024)
+    padding: 0 15px
 a
   text-decoration: none
 
@@ -27,6 +29,8 @@ a
     font-style: italic
     color: $white
     margin-bottom: 40px
+    +r(767)
+      font-size: 45px
   p
     font-size: 30px
     font-weight: normal
@@ -35,3 +39,5 @@ a
     letter-spacing: 1px
     color: $pale-olive
     margin-bottom: 60px
+    +r(767)
+      font-size: 20px

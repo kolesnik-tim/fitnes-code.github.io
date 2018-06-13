@@ -1,12 +1,22 @@
 .code
   padding-top: 90px
   padding-bottom: 110px
+  +r(767)
+    padding-bottom: 40px
   &__get
     img
       max-width: 445px
+      width: 100%
       margin-bottom: 40px
-      clip-path: url('#svgPath')
+      position: relative
+      left: 50%
+      transform: translate(-50%)
+    +r(767)
+      margin-bottom: 40px
   &__info
+    +r(767)
+      +center
+      flex-direction: column
     h4
       font-weight: 600
       line-height: 1.42

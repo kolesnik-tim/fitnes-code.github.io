@@ -13,12 +13,20 @@
     display: flex
     align-items: center
     height: 100%
+    +r(1200)
+      padding-left: 60px
+    +r(1024)
+      padding-right: 40px
+    +r(767)
+      padding: 0
     span
       font-family: 'SF Pro Text'
       font-size: 20px
       font-weight: normal
       font-style: normal
       color: $greyish-two
+      +r(767)
+        font-size: 15px
     h2
       font-weight: bold
       line-height: 1
@@ -27,6 +35,8 @@
       font-size: 100px
       padding-top: 20px
       margin-bottom: 85px
+      +r(767)
+        font-size: 50px
     p
       font-size: 30px
       font-weight: normal
@@ -36,3 +46,5 @@
       color: $pale-olive
       max-width: 730px
       margin-bottom: 70px
+      +r(767)
+        font-size: 20px

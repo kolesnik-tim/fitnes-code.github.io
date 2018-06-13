@@ -4,6 +4,8 @@
   top: 58%
   transform: translate(0, -50%)
   right: 0
+  +r(767)
+    top: 65%
   p
     transform: rotate(-90deg)
     font-size: 12px
@@ -15,12 +17,16 @@
     position: absolute
     top: -80px
     right: 4px
+    +r(767)
+      right: -14px
   ul
     display: flex
     flex-direction: column
     li
       position: relative
       padding-right: 30px
+      +r(767)
+        padding-right: 10px
       a
         visibility: hidden
         color: $white
@@ -47,6 +53,8 @@
           border-radius: 0
           right: 0
           left: auto
+          +r(767)
+            display: none
         a
           visibility: visible
           opacity: 1

@@ -1,5 +1,7 @@
 .blocker
   z-index: 13
+  +r(767)
+    padding: 0
   
 .menu
   width: 100%
@@ -43,6 +45,8 @@
   padding: 55px 0
   background: $black-five
   z-index: 99
+  +r(767)
+    padding: 55px 15px
   a.close-modal
     display: none !important
   .close
@@ -52,6 +56,9 @@
     position: absolute
     right: -70px
     top: -15px
+    +r(1024)
+      right: 10px
+      top: 10px
     span
       width: 30px
       height: 2px
@@ -86,6 +93,10 @@
       letter-spacing: 1.3px
       color: $apple
       margin-bottom: 55px
+      +r(767)
+        font-size: 28px
+        text-align: center
+        line-height: 1.3
     .form
       max-width: 430px
       width: 100%
@@ -103,6 +114,8 @@
         background: none
         text-align: center
         margin-bottom: 35px
+        +r(767)
+          font-size: 24px
         &::-webkit-input-placeholder
           color: $pale-olive
         &::-ms-input-placeholder
@@ -153,6 +166,11 @@
   width: 90%
   box-shadow: none
   z-index: 99
+  +r(1024)
+    height: auto
+    width: 100%
+    transform: none
+    padding: 40px 20px
   a.close-modal
     display: none !important
   .close
@@ -164,6 +182,8 @@
     top: 19px
     transform: skewX(6deg)
     z-index: 999
+    +r(1024)
+      transform: none
     span
       width: 30px
       height: 2px
@@ -187,6 +207,8 @@
     display: flex
     align-items: center
     height: 100%
+    +r(1024)
+      transform: none
   &__img
     width: 255px
     height: 255px
@@ -194,10 +216,15 @@
     border-radius: 50%
     margin: 0 auto
     margin-bottom: 30px
+    +r(767)
+      width: 200px
+      height: 200px
     img
       width: 100%
       height: 100%
   &__name
+    +r(1024)
+      margin-bottom: 30px
     h3
       font-size: 40px
       font-weight: bold
@@ -218,8 +245,13 @@
     display: flex
     padding: 30px
     margin-bottom: 40px
+    +r(500)
+      flex-direction: column
     img
       margin-right: 35px
+      +r(500)
+        margin: 0
+        margin-bottom: 20px
     p
       font-family: 'SF Pro Text'
       font-size: 18px
@@ -237,3 +269,5 @@
         font-style: normal
         line-height: 1.42
         color: $white
+        +r(600)
+          font-size: 18px

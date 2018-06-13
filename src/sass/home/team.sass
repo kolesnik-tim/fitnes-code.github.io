@@ -7,24 +7,43 @@
   width: 105%
   position: relative
   left: 50%
+  +r(1024)
+    transform: none
+    left: 0
+    height: auto
+    width: 100%
+    padding: 50px 0
   &__content
     transform: skewX(6deg)
     display: flex
     align-items: center
     height: 100%
+    +r(1024)
+      transform: none
   .swiper
     position: relative
     &-container
       overflow: visible
+      +r(1024)
+        overflow: hidden
       .swiper-slide.next, .swiper-slide.prev
         opacity: 0.4
+        +r(1024)
+          opacity: 1
         h3, p, a.btn
           opacity: 0
+          +r(1024)
+            opacity: 1
         .team__block__img
           width: 150px
           height: 150px
           margin-right: -150px
           margin-top: 30px
+          +r(1024)
+            width: 200px
+            height: 200px
+            margin: 0
+            margin-bottom: 30px
       .swiper-slide.next
         .team__block__img
           margin-right: 150px

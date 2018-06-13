@@ -16,6 +16,8 @@
     height: 50px
     img
       height: 50px
+      +r(767)
+        height: 40px
   .menu-open
     position: absolute
     left: 100px
@@ -23,6 +25,8 @@
     transform: translate(0, -50%)
     width: 30px
     height: 30px
+    +r(767)
+      left: 20px
     &.active
       span
         background: transparent

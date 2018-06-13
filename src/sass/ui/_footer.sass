@@ -1,8 +1,15 @@
 .footer
   background: $pine-green
   padding: 70px 0
+  +r(767)
+    padding-bottom: 20px
   &__logo
     max-width: 160px
+    +r(767)
+      position: relative
+      left: 50%
+      transform: translate(-50%)
+      margin-bottom: 20px
     img
       width: 100%
   p
@@ -29,10 +36,15 @@
     color: $warm-grey
     text-align: center
     display: block
+    +r(767)
+      padding: 20px 0
   &__done
     display: flex
     flex-direction: column
     align-items: flex-end
+    +r(767)
+      align-items: center
+      margin-top: 30px
     img
       height: 35px
       display: block
