@@ -140,11 +140,13 @@
       .swiper-slide
         background: none
         border-radius: 20px
-        opacity: 0.5
+        +r(767)
+          opacity: 0.5
         &-active
-          opacity: 1
-          p
-            opacity: 1 !important
+          +r(767)
+            opacity: 1
+            p
+              opacity: 1 !important
         &.active
           background: rgba($black, 0.6)
           +r(767)
