@@ -4,8 +4,9 @@ import 'owl.carousel2.thumbs';
 
 //intro
 var swiperIntro = new Swiper('.swiper-intro', {
-  pagination: {
-    el: '.swiper-pagination',
+  navigation: {
+    nextEl: '.swiper-intro-right',
+    prevEl: '.swiper-intro-left',
   },
 });
 
