@@ -12,12 +12,14 @@
 $icon-checkmark: "\EA01";
 $icon-fb: "\EA02";
 $icon-instagram: "\EA03";
-$icon-left: "\EA04";
-$icon-menu-open: "\EA05";
-$icon-ok: "\EA06";
-$icon-page-1: "\EA07";
-$icon-vk: "\EA08";
-$icon-yt: "\EA09";
+$icon-invalid-name: "\EA04";
+$icon-left: "\EA05";
+$icon-menu-open: "\EA06";
+$icon-ok: "\EA07";
+$icon-page-1: "\EA08";
+$icon-person: "\EA09";
+$icon-vk: "\EA0A";
+$icon-yt: "\EA0B";
 
 
 %icon {
@@ -39,9 +41,11 @@ $icon-yt: "\EA09";
 .icon-checkmark:before { content: $icon-checkmark; }
 .icon-fb:before { content: $icon-fb; }
 .icon-instagram:before { content: $icon-instagram; }
+.icon-invalid-name:before { content: $icon-invalid-name; }
 .icon-left:before { content: $icon-left; }
 .icon-menu-open:before { content: $icon-menu-open; }
 .icon-ok:before { content: $icon-ok; }
 .icon-page-1:before { content: $icon-page-1; }
+.icon-person:before { content: $icon-person; }
 .icon-vk:before { content: $icon-vk; }
 .icon-yt:before { content: $icon-yt; }

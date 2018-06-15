@@ -12,7 +12,7 @@ $('.menu-open').on('click', function() {
 
 
 //якорь
-$('.menu ul, nav').on('click','a', function(event) {
+$('.menu ul, .nav').on('click','a', function(event) {
   var id  = $(this).attr('href'),
     top = $(id).offset().top;
   $('body,html').animate({scrollTop: top - 100}, 1500);
@@ -23,33 +23,34 @@ $('.menu ul, nav').on('click','a', function(event) {
 
 
 //nav
-let intro = $('.intro').offset().top;
-let target = $('.target').offset().top - 200;
-let space = $('.space').offset().top - 200;
-let code = $('.code').offset().top - 200;
-let comand = $('.team').offset().top - 200;
-let scrollWindow;
-  
-$(window).on('scroll', function() {
-  scrollWindow = $(this).scrollTop();
-  if (scrollWindow >= intro && scrollWindow < target) {
-    $('.navigation li, .icon-page-1').removeClass('active');
-    $('#intro-1').addClass('active');
-  } else if(scrollWindow >= target && scrollWindow < space) {
-    $('.navigation li, .icon-page-1').removeClass('active');
-    $('.target-1').addClass('active');
-  } else if(scrollWindow >= space && scrollWindow < code) {
-    $('.navigation li, .icon-page-1').removeClass('active');
-    $('#space-1').addClass('active');
-  } else if(scrollWindow >= code && scrollWindow < comand) {
-    $('.navigation li, .icon-page-1').removeClass('active');
-    $('#code-1').addClass('active');
-  }else if(scrollWindow >= comand) {
-    $('.navigation li').removeClass('active');
-    $('.team-1').addClass('active');
-  }
-});
-
+if(window.location.pathname === '/') {
+  let heightWindow = $(window).height() / 2;
+  let intro = $('.intro').offset().top;
+  let target = $('.target').offset().top - heightWindow;
+  let space = $('.space').offset().top - heightWindow;
+  let code = $('.code').offset().top - heightWindow;
+  let comand = $('.team').offset().top - heightWindow;
+  let scrollWindow;
+  $(window).on('scroll', function() {
+    scrollWindow = $(this).scrollTop();
+    if (scrollWindow >= intro && scrollWindow < target) {
+      $('.navigation li, .icon-page-1').removeClass('active');
+      $('#intro-1').addClass('active');
+    } else if(scrollWindow >= target && scrollWindow < space) {
+      $('.navigation li, .icon-page-1').removeClass('active');
+      $('.target-1').addClass('active');
+    } else if(scrollWindow >= space && scrollWindow < code) {
+      $('.navigation li, .icon-page-1').removeClass('active');
+      $('#space-1').addClass('active');
+    } else if(scrollWindow >= code && scrollWindow < comand) {
+      $('.navigation li, .icon-page-1').removeClass('active');
+      $('#code-1').addClass('active');
+    }else if(scrollWindow >= comand) {
+      $('.navigation li').removeClass('active');
+      $('.team-1').addClass('active');
+    }
+  });
+}
 
 //modal
 teamSwiper.on('slideChange', function() {
@@ -99,3 +100,43 @@ function active(crr) {
   crr.addClass('active');
   crr.next('.space__floor__block').slideDown();
 }
+
+//header
+
+$('.header__services p').on('click', function() {
+  $('.header__services__option').slideToggle();
+});
+
+
+// $('input[type="range"]').rangeslider({
+//   polyfill: false,
+//   onSlide: function() {
+//     ProductSlider();
+//   },
+// });
+
+// let list;
+// $.getJSON('js/team.json', function(data) {
+//   list = data;
+// });
+
+// function ProductSlider() {
+//   let inputValue;
+//   let id;
+
+//   inputValue = $('input').val();
+//   list.forEach(function(item, i) {
+//     i = i + 1;
+//     let barabanH = item.d / 10;
+//     if(+inputValue === i) {
+//       $('.title').text(item.title);
+//       $('.title1').text(item.title1);
+//       $('.d').text(item.d);
+//       $('.l').text(item.l);
+//       $('.d1').text(item.d1);
+//       $('.s').text(item.s);
+//       $('.count').text(item.count);
+//       $('.barabanH').css('height', barabanH);
+//     }
+//   });
+// }

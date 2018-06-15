@@ -2,10 +2,32 @@
 header.header
   .container
     .row.middle-xs
-      .col-xs-12.center-xs
+      .col-sm-4
+        .header__block
+          a(href="#").menu-open
+            span
+          .header__services
+            p Услуги
+              i.icon.icon-invalid-name
+            .header__services__option
+              ul
+                li
+                  a(href="#") Услуги
+                li
+                  a(href="#") Услуги
+                li
+                  a(href="#") Услуги
+            a(href="#") Клубные карты
+      .col-sm-4.col-xs-12.center-xs
         .header__logo
           img(src="img/logo.svg", alt="")
-        a(href="#").menu-open
-          span
-
+      .col-sm-4.end-xs
+        ul
+          li
+            a(href="#") О клубе
+          li
+            a(href="#") Контакты
+          li
+            a(href="#") Личный кабинет
+              i.icon.icon-person
 //END header

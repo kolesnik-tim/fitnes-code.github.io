@@ -21,7 +21,18 @@ body
 a
   text-decoration: none
 
-
+.out
+  margin-top: 100px
+h1
+  font-weight: bold
+  line-height: 1
+  letter-spacing: 3px
+  color: $white
+  font-size: 100px
+  padding-top: 20px
+  margin-bottom: 85px
+  +r(767)
+    font-size: 50px
 .heading
   h2
     font-size: 80px
@@ -31,6 +42,9 @@ a
     margin-bottom: 40px
     +r(767)
       font-size: 45px
+  &-secondary
+    h2
+      color: $apple
   p
     font-size: 30px
     font-weight: normal

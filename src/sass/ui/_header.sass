@@ -10,8 +10,50 @@
   align-items: center
   z-index: 11
   transition: all 0.3s
+  .container
+    max-width: 1100px
   &.bg
     background: url('')
+  a, p
+    font-size: 18px
+    font-weight: normal
+    font-style: italic
+    color: $apple
+    line-height: 30px
+  &__block
+    display: flex
+    align-items: center
+  &__services
+    display: inline-flex
+    position: relative
+    +r(1024)
+      display: none
+    p
+      cursor: pointer
+      padding-right: 30px
+      i
+        font-size: 8px
+        padding-left: 5px
+    &__option
+      display: none
+      position: absolute
+      top: 30px
+      background: url('../img/bg_all.png')
+      background-position: 50% 0
+      padding: 10px 20px
+      border-radius: 4px
+      ul
+        +center
+        flex-direction: column
+  ul
+    display: flex
+    justify-content: space-between
+    +r(1024)
+      display: none
+    li
+      i
+        font-size: 14px
+        padding-left: 10px
   &__logo
     height: 50px
     img
@@ -19,14 +61,13 @@
       +r(767)
         height: 40px
   .menu-open
-    position: absolute
-    left: 100px
-    top: 50%
-    transform: translate(0, -50%)
     width: 30px
     height: 30px
+    margin-right: 50px
+    display: inline-flex
     +r(767)
       left: 20px
+      position: absolute
     &.active
       span
         background: transparent

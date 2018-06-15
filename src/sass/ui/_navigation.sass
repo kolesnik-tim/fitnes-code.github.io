@@ -28,12 +28,10 @@
       +r(767)
         padding-right: 10px
       a
-        visibility: hidden
-        color: $white
         font-size: 12px
         font-weight: normal
         font-style: normal
-        opacity: 0
+        color: transparent
         transition: all 0.3s
       span
         height: 4px
@@ -56,8 +54,7 @@
           +r(767)
             display: none
         a
-          visibility: visible
-          opacity: 1
+          color: $white
         &.target-1, &.team-1
           span
             background: $white

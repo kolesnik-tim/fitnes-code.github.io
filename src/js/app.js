@@ -1,3 +1,3 @@
-import './import/slider';
+import './import/slider.js';
 import './import/ui';
 import './import/map';

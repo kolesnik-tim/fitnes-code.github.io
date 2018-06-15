@@ -28,10 +28,18 @@ gulp.task('copy:img', function() {
         .pipe(gulp.dest(config.dest.img));
 });
 
+
+gulp.task('copy:json', function() {
+    return gulp
+        .src(config.src.js + '/*.*')
+        .pipe(gulp.dest(config.dest.js));
+});
+
 gulp.task('copy', [
     'copy:img',
     // 'copy:rootfiles',
     // 'copy:lib',
+    'copy:json',
     'copy:fonts'
 ]);
 gulp.task('copy:watch', function() {
