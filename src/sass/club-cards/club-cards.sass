@@ -3,8 +3,31 @@
   display: flex
   flex-direction: column
   justify-content: center
+  background: url('../img/bg-code.png') no-repeat
+  background-size: cover
+  background-position: 50% 50%
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    width: 340px
+    height: 385px
+    background: url('../img/bitmap.png')
+    background-size: contain
+    background-repeat: no-repeat
+    right: 10%
+    z-index: 2
+    +r(1024)
+      right: 0px
+    +r(767)
+      width: 240px
+      height: 285px
   h1
     max-width: 415px
+    position: relative
+    z-index: 3
   p
     font-size: 30px
     font-weight: normal
@@ -13,5 +36,7 @@
     color: $white
     max-width: 540px
     margin-bottom: 200px
+    position: relative
+    z-index: 3
     +r(767)
       font-size: 24px

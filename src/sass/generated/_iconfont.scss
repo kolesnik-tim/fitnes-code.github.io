@@ -18,8 +18,9 @@ $icon-menu-open: "\EA06";
 $icon-ok: "\EA07";
 $icon-page-1: "\EA08";
 $icon-person: "\EA09";
-$icon-vk: "\EA0A";
-$icon-yt: "\EA0B";
+$icon-play: "\EA0A";
+$icon-vk: "\EA0B";
+$icon-yt: "\EA0C";
 
 
 %icon {
@@ -47,5 +48,6 @@ $icon-yt: "\EA0B";
 .icon-ok:before { content: $icon-ok; }
 .icon-page-1:before { content: $icon-page-1; }
 .icon-person:before { content: $icon-person; }
+.icon-play:before { content: $icon-play; }
 .icon-vk:before { content: $icon-vk; }
 .icon-yt:before { content: $icon-yt; }

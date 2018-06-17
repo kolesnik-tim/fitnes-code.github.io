@@ -1,0 +1,119 @@
+.block-article
+  background: #ffffff
+  transform: skewX(-11deg)
+  border-radius: 7px
+  overflow: hidden
+  position: relative
+  margin-bottom: 70px
+  +r(1024)
+    transform: none
+    left: 0
+    right: 0
+    width: 100%
+  +r(767)
+    border-radius: 7px
+  &__content
+    transform: skewX(11deg)
+    min-height: 400px
+    width: 110%
+    padding-top: 40px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50% 50%
+    margin-left: -15px
+    +r(1024)
+      transform: none
+      width: 100% !important
+      left: 0 !important
+      margin-left: 0
+    +r(767)
+      min-height: 100%
+
+  &-left
+    left: -40px
+    border-bottom-right-radius: 90px
+    +r(1024)
+      border-top-right-radius: 90px
+    .block-article__title
+      left: calc(100% - 500px)
+  &-right
+    right: -40px
+    border-top-left-radius: 90px
+    +r(1024)
+      border-bottom-left-radius: 90px
+    .block-article__content
+      position: relative
+      left: -50px
+    .block-article__title
+      margin-left: 130px
+  &__img
+    position: absolute
+    z-index: 2
+  &__title
+    position: relative
+    z-index: 3
+    max-width: 350px
+    position: relative
+    +r(1024)
+      padding: 20px
+      max-width: 100%
+      margin-left: 0 !important
+      left: 0 !important
+    h4
+      font-size: 40px
+      font-weight: bold
+      line-height: 1.15
+      letter-spacing: 0.5px
+      margin-bottom: 35px
+      a
+        color: $white
+    p
+      font-size: 18px
+      font-weight: normal
+      font-style: normal
+      line-height: 1.44
+      letter-spacing: 0.6px
+      color: $white
+    span
+      font-size: 14px
+      font-weight: normal
+      font-style: normal
+      letter-spacing: 0.5px
+      color: $white
+      margin-bottom: 20px
+      display: block
+  &-secondary
+    border-bottom-right-radius: 90px
+    border-top-left-radius: 90px
+    width: 85% !important
+    position: relative
+    left: 50%
+    transform: skewX(-4deg) translate(-50%) !important
+    .block-article__content
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-end
+      padding-bottom: 50px
+      +r(1024)
+        transform: skewX(4deg) !important
+        width: 110% !important
+        margin-left: -15px
+      +r(767)
+        width: 100%
+        transform: none !important
+    +r(1024)
+      width: 85%
+      transform: skewX(-4deg) translate(-50%) !important
+      left: 50%
+    +r(767)
+      width: 100% !important
+      transform: none !important
+      left: 0
+    .block-article__title
+      margin-left: 100px
+      max-width: 75%
+      +r(1024)
+        margin-left: 100px !important
+      +r(767)
+        margin-left: 10px !important

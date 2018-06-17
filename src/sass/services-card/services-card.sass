@@ -3,6 +3,8 @@
   padding-bottom: 100px
   background: url('../img/shutterstock-657941563.png') no-repeat
   background-size: cover
+  +r(767)
+    padding-bottom: 30px
   &__title
     p
       font-size: 30px
@@ -12,7 +14,12 @@
       color: $white
       margin-bottom: 55px
       max-width: 735px
+      +r(767)
+        font-size: 20px
   &__block
+    +r(767)
+      +center
+      flex-direction: column
     &__img
       min-height: 150px
       +center
@@ -24,18 +31,24 @@
       letter-spacing: 0.8px
       color: $white
       max-width: 215px
+      +r(767)
+        text-align: center
 .feel
   position: relative
   padding-top: 100px
   padding-bottom: 120px
+  +r(767)
+    padding-bottom: 0px
   &:before
     content: ''
     position: absolute
     bottom: 0
-    width: 600px
-    height: 80px
+    width: 700px
+    height: 90px
     background: $white
     clip-path: polygon(0 0%, 0% 0, 100% 100%, 0 100%)
+    +r(767)
+      display: none
   p
     font-family: 'SF Pro Display'
     font-size: 24px
@@ -44,15 +57,59 @@
     line-height: 1.42
     letter-spacing: 1px
     color: $pale-olive
+    +r(767)
+      margin-bottom: 30px
+  &__video
+    border-radius: 7px
+    border-bottom-right-radius: 90px
+    border-top-left-radius: 90px
+    transform: skewX(-11deg)
+    height: 335px
+    width: 93%
+    overflow: hidden
+    +r(767)
+      position: relative
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%) skewX(-11deg)
+      width: 88%
+    a
+      transform: skewX(11deg)
+      height: 100%
+      width: 100%
+      display: block
+      position: relative
+      img
+        width: 110%
+        position: relative
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+      i
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        font-size: 100px
+        color: $apple
+        transition: all 0.3s
+      &:hover
+        i
+          color: $white
 .features
   background: $white
   position: relative
   padding: 120px 0
   padding-bottom: 10px
+  overflow: hidden
+  +r(767)
+    padding-top: 50px
   &__block
     margin-bottom: 140px
     margin-top: 50px
     min-height: 400px
+    +r(767)
+      margin-top: 0
     h3
       font-size: 40px
       font-weight: bold
@@ -68,28 +125,47 @@
       letter-spacing: 1px
       color: #333333
       max-width: 440px
+      +r(767)
+        font-size: 20px
     &__img
-      max-width: 625px
+      max-width: 600px
       position: absolute
       overflow: hidden
       height: 400px
       border-radius: 5px
+      +r(1200)
+        max-width: 500px
+      +r(1024)
+        max-width: 400px
+      +r(767)
+        position: relative
+        max-width: 100%
+        transform: none
+        left: 0
+        right: 0
       &-primary
         left: -50px
         border-bottom-right-radius: 90px
         transform: skewX(-12deg)
         .features__block__img__content
+          +center
           width: 100%
           height: 100%
           transform: skewX(12deg)
+          +r(767)
+            transform: none
       &-secondary
         right: -50px
         border-bottom-left-radius: 90px
         transform: skewX(12deg)
         .features__block__img__content
+          +center
           width: 100%
           height: 100%
           transform: skewX(-12deg)
           margin-left: -50px
+          +r(767)
+            transform: none
+            margin: 0
       img
        height: 100%

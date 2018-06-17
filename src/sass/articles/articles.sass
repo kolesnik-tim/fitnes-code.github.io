@@ -1,0 +1,35 @@
+.articles
+  padding-top: 60px
+  h1
+    margin-bottom: 40px
+  &__filter
+    display: flex
+    margin-bottom: 70px
+    flex-wrap: wrap
+    a
+      font-family: 'SF Pro Text'
+      font-size: 18px
+      font-weight: normal
+      font-style: normal
+      color: $pale-olive
+      border-radius: 10px
+      border: solid 2px $apple
+      padding: 7px 10px
+      margin-right: 20px
+      margin-bottom: 10px
+      +r(767)
+        width: 100%
+        margin-right: 0
+        text-align: center
+  .block-article
+    width: 105%
+    transform: skewX(-4deg)
+    +r(1024)
+      width: 100%
+      transform: none
+    &__content
+      transform: skewX(4deg)
+      +r(1024)
+        transform: none
+  .block-article-right
+    right: -20px

@@ -1,0 +1,93 @@
+.press-zone
+  &__intro
+    min-height: 700px
+    padding-bottom: 65px
+    height: 100%
+    display: flex
+    align-items: center
+    position: relative
+    background: url('../img/bg-services.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50% 50%
+    p
+      font-size: 30px
+      font-weight: normal
+      line-height: 1.33
+      letter-spacing: 1px
+      color: $pale-olive
+      max-width: 730px
+      margin-bottom: 50px
+    &__new
+      span
+        font-size: 14px
+        font-weight: normal
+        font-style: normal
+        letter-spacing: 0.5px
+        color: $warm-grey
+      h4
+        a
+          font-size: 24px
+          font-weight: 600
+          line-height: 1.42
+          letter-spacing: 0.8px
+          color: $apple
+      p
+        font-size: 18px
+        font-weight: normal
+        font-style: normal
+        line-height: 1.44
+        letter-spacing: normal
+        color: $white
+        padding-right: 20px
+  &__shares
+    padding: 100px 0
+    &__content
+      display: flex
+      +r(767)
+        flex-wrap: wrap
+    &__block
+      width: 100%
+      height: 390px
+      +center
+      position: relative
+      background-repeat: no-repeat
+      background-size: cover
+      a
+        font-size: 40px
+        font-weight: bold
+        line-height: 1.25
+        letter-spacing: 0.5px
+        text-align: center
+        color: #2e2e2e
+        padding: 0 45px
+        position: relative
+        z-index: 3
+        width: 100%
+        height: 100%
+        +center
+        background: rgba($apple, 0.7)
+        +r(1024)
+          padding: 0
+  &__articles
+    padding: 100px 0
+    overflow: hidden
+    .heading
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 30px
+      a
+        margin-bottom: 20px
+    .block-article
+      width: 105%
+      transform: skewX(-4deg)
+      +r(1024)
+        width: 100%
+        transform: none
+      &__content
+        transform: skewX(4deg)
+        +r(1024)
+          transform: none
+    .block-article-right
+      right: -20px
