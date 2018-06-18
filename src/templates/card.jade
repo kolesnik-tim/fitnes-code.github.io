@@ -1,0 +1,64 @@
+---
+title: Карты на 4-15 месяцев
+space: space-card
+---
+extends layouts/_layout
+block content
+  .card__intro
+    .container
+      .card__intro__title
+        h1 Карты на 4-15 месяцев
+        p до 30 апреля 2018 года
+      .card__intro__content
+        .card__intro__block
+          .card__intro__block__img
+            img(src="img/prime.svg", alt="")
+          p Дополнительное фитнесс тестирование
+        .card__intro__block
+          .card__intro__block__img
+            img(src="img/prime.svg", alt="")
+          p -15 % на персональные тренировки
+        .card__intro__block
+          .card__intro__block__img
+            img(src="img/prime.svg", alt="")
+          p Карта для друга на 1 месяц
+        .card__intro__block
+          .card__intro__block__img
+            img(src="img/prime.svg", alt="")
+          p -15% на игровую зону
+        .card__intro__block
+          .card__intro__block__img
+            img(src="img/prime.svg", alt="")
+          p Фитнес коктель в подарок
+      a(href="#").btn.btn-primary Узнать цену
+  .card__place
+    .container
+      .row
+        .col-xs-12
+          .heading.heading-secondary
+            h2 Единственный во Фрязино
+        .col-sm-4.col-xs-12
+          span 16
+          p зон спорта, релакса и красоты
+        .col-sm-8.col-xs-12.start-sm.center-xs
+          .card__place__video
+            a(href="#")
+              img(src="img/women-relaxing-in-a-salt-cave-at-a-halotherapy-354219518.png")
+              i.icon.icon-play
+  include ./home/space
+  .card__form
+    .container
+      .row
+        .col-xs-12
+          .heading.heading-secondary
+            h2 Узнать стоимость
+            p Наши менеджеры свяжатся с вами и расскажут об условиях акции
+          form.form(action="")
+            input(type="text" placeholder="Имя")
+            input(type="tel" placeholder="Телефон")
+            input(type="submit" value="Узнать цену").btn.btn-primary
+            .form__checkbox
+              input(type="checkbox" id="checkbox" checked)
+              label(for="checkbox") Нажимая кнопку, Вы подтверждаете, что ознакомлены и согласны с 
+                a(href="#") Соглашением о конфиденциальности персональной информации
+  include ./partials/_pop-up

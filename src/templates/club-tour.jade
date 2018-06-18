@@ -1,0 +1,79 @@
+---
+title: Тур по клубу
+---
+extends layouts/_layout
+block content
+  .club-tour__intro
+    .container
+      .row
+        .col-xs-12
+          h1 Тур по клубу
+          p Четыре этажа спорта, здоровья и релакса для каждого. Единственный клуб в городе с техникой, которую только начали продавать.
+          .club-tour__intro__nav.nav
+            a(href="#plan") Схема клуба
+            a(href="#gallery") Галерея
+  .about__place
+    .container
+      .row
+        .col-xs-12
+          .heading.heading-secondary
+            h2 Единственный во Фрязино
+        .col-sm-4.col-xs-12
+          span 16
+          p зон спорта, релакса и красоты
+        .col-sm-8.col-xs-12.start-sm.center-xs
+          .about__place__video
+            a(href="#")
+              img(src="img/women-relaxing-in-a-salt-cave-at-a-halotherapy-354219518.png")
+              i.icon.icon-play
+  .club-tour__plan#plan
+    .container
+      .row
+        .col-xs-12
+          .heading.heading-secondary
+            h2 Схема клуба
+            p Четыре этажа спорта, здоровья и релакса для каждого. Единственный клуб в городе с техникой, которую только начали продавать.
+        .col-xs-12
+          .club-tour__plan__content
+            .tabs
+              ul.tabs__caption
+                li.active
+                  p 03
+                  span этаж
+                li
+                  p 02
+                  span этаж
+                li
+                  p 01
+                  span этаж
+                li
+                  p -01
+                  span этаж
+              .tabs__content.active
+                img(src="img/tour/page-1.svg")
+              .tabs__content
+                img(src="img/tour/page-1.svg")
+              .tabs__content
+                img(src="img/tour/page-1.svg")
+              .tabs__content
+                img(src="img/tour/page-1.svg")
+  .club-tour__gallery#gallery
+    .container
+      .row
+        .col-xs-12
+          .heading.heading-secondary
+            h2 Галерея
+            p Мы старались собрать универсальную команду, которая могла бы работать по всем востребованным сегментам фитнеса.
+    .swiper
+      .swiper-container.swiper-club-tour
+        .swiper-wrapper
+          .swiper-slide(style="background-image: url(img/1.jpg)")
+          .swiper-slide(style="background-image: url(img/1.jpg)")
+          .swiper-slide(style="background-image: url(img/1.jpg)")
+          .swiper-slide(style="background-image: url(img/1.jpg)")
+        .swiper-pagination
+        .swiper-club-tour-right.swiper-button-next
+           i.icon.icon-left
+        .swiper-club-tour-left.swiper-button-prev
+           i.icon.icon-left
+  include ./partials/_pop-up

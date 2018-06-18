@@ -1,0 +1,205 @@
+.card
+  &__intro
+    padding: 140px 0
+    padding-bottom: 100px
+    background: url('../img/bg-services.png') no-repeat
+    background-size: contain
+    +r(767)
+      padding-bottom: 30px
+    &__title
+      padding-bottom: 110px
+      h1
+        font-size: 80px
+        margin-bottom: 40px
+        +r(767)
+          font-size: 50px
+      p
+        font-size: 30px
+        font-weight: normal
+        line-height: 1.33
+        letter-spacing: 1px
+        color: $pale-olive
+        margin-bottom: 55px
+        max-width: 735px
+        +r(767)
+          font-size: 20px
+    &__content
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      padding-bottom: 110px
+      +r(767)
+        flex-direction: column
+    &__block
+      margin-bottom: 50px
+      padding-right: 10px
+      +r(767)
+        +center
+        flex-direction: column
+      &__img
+        min-height: 150px
+        +center
+        justify-content: flex-start
+      p
+        font-family: 'SF Pro Text'
+        font-size: 18px
+        font-weight: normal
+        font-style: normal
+        line-height: 1.42
+        letter-spacing: 0.8px
+        color: $pale-olive
+        max-width: 160px
+        +r(767)
+          text-align: center
+          max-width: 100%
+  &__place
+    position: relative
+    padding-top: 100px
+    padding-bottom: 120px
+    background: $white
+    +r(767)
+      padding-bottom: 0px
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      width: 700px
+      height: 90px
+      background: $white
+      clip-path: polygon(0 0%, 0% 0, 100% 100%, 0 100%)
+      +r(767)
+        display: none
+    h2
+      max-width: 550px
+    span
+      font-size: 100px
+      font-weight: bold
+      font-style: italic
+      color: #c0d5b3
+      color: $black
+      line-height: 90px
+      margin-top: 20px
+      display: inline-block
+    p
+      font-family: 'SF Pro Display'
+      font-size: 30px
+      font-weight: normal
+      font-style: normal
+      line-height: 1.42
+      letter-spacing: 1px
+      color: #333333
+      max-width: 200px
+      +r(767)
+        margin-bottom: 30px
+    &__video
+      border-radius: 7px
+      border-bottom-right-radius: 90px
+      border-top-left-radius: 90px
+      transform: skewX(-11deg)
+      height: 335px
+      width: 93%
+      overflow: hidden
+      +r(767)
+        position: relative
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%) skewX(-11deg)
+        width: 88%
+      a
+        transform: skewX(11deg)
+        height: 100%
+        width: 100%
+        display: block
+        position: relative
+        img
+          width: 110%
+          position: relative
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+        i
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+          font-size: 100px
+          color: $apple
+          transition: all 0.3s
+        &:hover
+          i
+            color: $white
+  &__form
+    padding: 160px 0
+    background: $white url('../img/bg-mini-intro.png') no-repeat
+    background-position: 100% 0
+    margin-top: 30px
+    +r(1024)
+      background-position: 500px 0
+    +r(767)
+      background: $white
+    p
+      color: #333333
+      max-width: 710px
+    .form
+      max-width: 430px
+      width: 100%
+      display: flex
+      flex-direction: column
+      +r(767)
+        position: relative
+        left: 50%
+        transform: translate(-50%)
+      input[type=text], input[type=tel]
+        font-size: 30px
+        font-weight: normal
+        font-style: italic
+        letter-spacing: 1px
+        color: $pale-olive
+        width: 100%
+        border-bottom: 2px solid $apple
+        background: none
+        margin-bottom: 35px
+        padding-left: 15px
+        +r(767)
+          font-size: 24px
+        &::-webkit-input-placeholder
+          color: $pale-olive
+        &::-ms-input-placeholder
+          color: $pale-olive
+        &::placeholder
+          color: $pale-olive
+      .btn
+        &:hover
+          background: rgba($black, 0.1)
+          color: $apple
+      &__checkbox
+        margin-top: 30px
+        margin-left: 40px
+        input
+          display: none
+        input + label
+          font-family: 'SF Pro Text'
+          font-size: 14px
+          font-weight: normal
+          font-style: normal
+          color: $black
+          line-height: 16px
+          display: inline-block
+          position: relative
+          a
+            color: $apple
+        input + label:before
+          content: ''
+          position: absolute
+          left: -45px
+          top: 4px
+          width: 25px
+          height: 25px
+          border: 1px solid $black
+          border-radius: 3px
+          +center
+          font-family: "iconfont"
+          font-size: 13px
+          color: $black
+        input:checked + label:before
+          content: '\EA01'

@@ -75,3 +75,14 @@ var teamSwiper = new Swiper('.swiper-team', {
 module.exports = teamSwiper;
 
 
+//club-tour
+var swiperIntro = new Swiper('.swiper-club-tour', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-club-tour-right',
+    prevEl: '.swiper-club-tour-left',
+  },
+});

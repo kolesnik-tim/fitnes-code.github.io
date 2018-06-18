@@ -1,5 +1,21 @@
 .space
   padding-top: 100px
+  position: relative
+  &-card
+    background: $white
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 100%
+      height: 30%
+      background: $black
+    .heading
+      h2
+        color: $black
+      p
+        color: #313833
   &__floor
     a
       display: block
