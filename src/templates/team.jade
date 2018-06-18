@@ -1,0 +1,42 @@
+---
+title: Клубне карты
+codeClass: code-club
+---
+extends layouts/_layout
+block content
+  .team-page
+    .container
+      .row
+        .col-xs-12.center-xs
+          h1 Тренерский состав
+        .col-xs-12
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide
+        .col-xs-12
+          .team-page__filter
+            ul
+              li.active 
+                a(href="#") Все
+              li
+                a(href="#") ЭйрЙога
+              li
+                a(href="#") Танцевальный зал
+              li
+                a(href="#") боевые искусства
+              li
+                a(href="#") Тренажерный зал
+              li
+                a(href="#") Пилатес
+              li
+                a(href="#") Кроссфит
+              li
+                a(href="#") Велостудия
+              li
+                a(href="#") Стрейч зал
+              li
+                a(href="#") Кардио зона
+              li
+                a(href="#") Бассейн
+    
+  include ./partials/_pop-up
