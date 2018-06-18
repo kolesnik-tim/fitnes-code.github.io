@@ -1,0 +1,97 @@
+.article
+  &__intro
+    height: 400px
+    position: relative
+    background: url('../img/article/salt-room-applying-salt-therapy-in-the-spa-607780880.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50% 50%
+    .container
+      height: 100%
+    &__block
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+    &__breadcrumbs
+      padding-top: 25px
+      ul
+        display: flex
+        flex-wrap: wrap
+      li
+        position: relative
+        &:after
+          content: '>'
+          position: relative
+          right: 0
+          font-size: 14px
+          font-weight: normal
+          font-style: normal
+          letter-spacing: 0.5px
+          color: $white
+          padding: 0 4px
+        &:last-child
+          &:after
+            display: none
+        a
+          font-size: 14px
+          font-weight: normal
+          font-style: normal
+          letter-spacing: 0.5px
+          color: $white
+    span
+      font-size: 14px
+      font-weight: normal
+      font-style: normal
+      letter-spacing: 0.5px
+      color: $white
+    h1
+      font-size: 80px
+      letter-spacing: normal
+      padding-top: 15px
+      +r(970)
+        font-size: 50px
+  &__content
+    background: $white
+    padding: 90px 0
+    .article__text
+      p, li, span
+        font-family: 'SF Pro Text'
+        font-size: 18px
+        font-weight: normal
+        font-style: normal
+        line-height: 1.44
+        color: $black
+        padding-bottom: 70px
+      span
+        padding-bottom: 0
+        margin-right: 15px
+        padding-bottom: 15px
+      li
+        padding-bottom: 0
+        +r(1024)
+          padding-bottom: 15px
+      ul
+        padding-bottom: 60px
+      h4
+        font-size: 24px
+        font-weight: 600
+        font-style: italic
+        line-height: 1.42
+        letter-spacing: 0.8px
+        color: $apple
+        padding-bottom: 15px
+      img
+        width: 100%
+        margin-bottom: 40px
+  &__social
+    display: flex
+    padding-top: 30px
+    margin-bottom: 300px
+    a
+      margin-right: 10px
+      color: $black
+      i
+        font-size: 18px
+      &:last-child
+        margin-right: 0  
