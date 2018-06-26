@@ -74,6 +74,32 @@ var teamSwiper = new Swiper('.swiper-team', {
 });
 module.exports = teamSwiper;
 
+//team-page
+var teamSwiper2 = new Swiper('.swiper-team-page', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+});
+teamSwiper2.on('reachBeginning', function() {
+  teamSwiper2.update();
+});
+
+$('a[rel]').click(function(event) {
+  let slidePrev = $(this).closest('.swiper-slide').hasClass('swiper-slide-prev');
+  let slideNext = $(this).closest('.swiper-slide').hasClass('swiper-slide-next');
+  if(slidePrev) {
+    teamSwiper2.slidePrev();
+    return false;
+  } else if(slideNext) {
+    teamSwiper2.slideNext();
+    return false;
+  } else{
+    $(this).modal({
+      fadeDuration: 250,
+    });
+    return false;
+  }
+});
 
 //club-tour
 var swiperIntro = new Swiper('.swiper-club-tour', {

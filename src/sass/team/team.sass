@@ -1,4 +1,6 @@
 .team-page
+  padding-top: 100px
+  overflow: hidden
   &__filter
     ul
       width: 100%
@@ -13,7 +15,93 @@
           color: $pale-olive
           padding: 8px 12px
           display: inline-block
+          font-size: 24px
+          font-weight: normal
+          font-style: normal
+          color: $pale-olive
+          +r(767)
+            font-size: 15px
         &.active
           background: $apple
           a
             color: $white
+  .swiper
+    position: relative
+    &-container
+      overflow: visible
+      +r(1024)
+        overflow: hidden
+      .swiper-slide-next, .swiper-slide-prev
+        opacity: 0.4
+        +r(1024)
+          opacity: 1
+        h3, p, a.btn
+          opacity: 0
+          +r(1024)
+            opacity: 1
+        .team-page__block__img
+          width: 150px
+          height: 150px
+          margin-right: -150px
+          margin-top: 30px
+          +r(1024)
+            width: 200px
+            height: 200px
+            margin: 0
+            margin-bottom: 30px
+      .swiper-slide-next
+        .team-page__block__img
+          margin-right: 250px
+      .swiper-slide-prev
+        .team-page__block__img
+          position: relative
+          left: 85%
+    &-slide
+      display: flex
+      flex-direction: column
+      align-items: center
+      .team-page__block
+        margin-bottom: 80px
+        display: flex
+        &__img
+          overflow: hidden
+          width: 200px
+          height: 200px
+          border-radius: 50%
+          margin-bottom: 30px
+          img
+            width: 100%
+            height: 100%
+        &__text
+          flex: 1
+          margin-left: 30px
+          h3
+            font-size: 40px
+            font-weight: bold
+            font-style: italic
+            line-height: 1.15
+            letter-spacing: 1.3px
+            color: $white
+            margin-bottom: 25px
+            display: block
+            span
+              font-family: 'SF Pro Text'
+              font-size: 14px
+              font-weight: normal
+              font-style: normal
+              color: $warm-grey
+              display: block
+          p
+            font-family: 'SF Pro Text'
+            font-size: 17px
+            font-weight: normal
+            font-style: normal
+            line-height: 1.44
+            color: $pale-olive
+            margin-bottom: 55px
+            min-height: 110px
+                
+
+  .btn
+    +r(767)
+      width: 96%
