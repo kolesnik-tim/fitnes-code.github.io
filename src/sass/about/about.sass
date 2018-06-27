@@ -145,8 +145,18 @@
           font-size: 20px
         +r(1024)
           max-width: 100%
+      &__text
+        max-width: 445px
+        padding: 0 10px
+        +r(767)
+          max-width: 100%
+          margin-top: 15px
+        &-secondary
+          position: relative
+          left: 100%
+          transform: translate(-100%)
       &__img
-        max-width: 600px
+        width: 50%
         position: absolute
         overflow: hidden
         height: 400px !important
@@ -160,13 +170,9 @@
           +r(767)
             transform: none
             margin: 0
-        +r(1200)
-          max-width: 500px
-        +r(1024)
-          max-width: 400px
         +r(767)
           position: relative
-          max-width: 100%
+          width: 100%
           transform: none
           left: 0
           right: 0

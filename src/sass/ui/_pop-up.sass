@@ -13,24 +13,53 @@
   top: 0
   z-index: 10
   display: none
-  ul
-    +center
-    width: 100%
+  padding-top: 100px
+  &__content
+    overflow: scroll
     height: 100%
-    flex-direction: column
-  li
-    text-align: center
-  a
+    padding: 50px 85px
+    +r(767)
+      padding: 15px
+  &__block
+    max-width: 225px
+    width: 100%
+    margin-right: 10px
+    margin-bottom: 40px
+  &__top, &__bottom
+    display: flex
+    justify-content: space-between
+    +r(1024)
+      flex-wrap: wrap
+  &__top
+  h4
     font-size: 24px
     font-weight: 600
+    font-style: italic
     line-height: 1.42
     letter-spacing: 0.8px
     color: $apple
-    line-height: 2
-    transition: all 0.3s
-    &:hover
-      color: $white
-      border-bottom: 2px solid $white
+    margin-bottom: 20px
+    a
+      font-size: 24px
+      font-weight: 600
+      font-style: italic
+      line-height: 1.42
+      letter-spacing: 0.8px
+      color: $apple
+  li
+    display: block
+    padding: 8px 0
+  a
+    font-family: 'SF Pro Display'
+    font-size: 18px
+    font-weight: normal
+    font-style: normal
+    letter-spacing: 0.6px
+    color: $pale-olive
+    display: block
+    line-height: 1.1
+  li:hover
+    background: rgba($apple, 0.4)
     
     
     

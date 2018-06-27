@@ -41,6 +41,16 @@ var spaceSlider = new Swiper('.swiper-space', {
   }
 });
 
+$('.swiper-slide-active').addClass('active');
+$('.owl-thumb-item').on('click', function() {
+  let btn = $(this);
+  setTimeout(function() {
+    $('.owl-thumb-item').removeClass('active');
+    btn.addClass('active');  
+  }, 100);
+ 
+});
+
 //tabs space
 $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
   $(this)
@@ -84,21 +94,21 @@ teamSwiper2.on('reachBeginning', function() {
   teamSwiper2.update();
 });
 
-$('a[rel]').click(function(event) {
-  let slidePrev = $(this).closest('.swiper-slide').hasClass('swiper-slide-prev');
-  let slideNext = $(this).closest('.swiper-slide').hasClass('swiper-slide-next');
-  if(slidePrev) {
+$('.swiper-team-page a[rel]').click(function(event) {
+  let slidePrev1 = $(this).closest('.swiper-slide').hasClass('swiper-slide-prev');
+  let slideNext1 = $(this).closest('.swiper-slide').hasClass('swiper-slide-next');
+  console.log('dfdg');
+  if(slidePrev1) {
     teamSwiper2.slidePrev();
     return false;
-  } else if(slideNext) {
+  } else if(slideNext1) {
     teamSwiper2.slideNext();
     return false;
-  } else{
-    $(this).modal({
-      fadeDuration: 250,
-    });
-    return false;
   }
+  $(this).modal({
+    fadeDuration: 250,
+  });
+  return false;
 });
 
 //club-tour
