@@ -122,3 +122,36 @@ var swiperIntro = new Swiper('.swiper-club-tour', {
     prevEl: '.swiper-club-tour-left',
   },
 });
+
+
+
+//schedule
+
+var teamSwiper = new Swiper('.swiper-schedule', {
+  slidesPerView: 7,
+  spaceBetween: 1,
+  breakpoints: {
+    450: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    630: {
+      slidesPerView: 3,
+    },
+    760: {
+      slidesPerView: 4,
+    },
+    880: {
+      slidesPerView: 5,
+    },
+    1000: {
+      slidesPerView: 6,
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-schedule-right',
+    prevEl: '.swiper-schedule-left',
+  },
+});

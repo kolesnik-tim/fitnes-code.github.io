@@ -1,6 +1,14 @@
 import 'jquery-modal';
 import Swiper from 'swiper';
 import teamSwiper from './slider';
+import '../lib/selectize.min';
+
+
+//select
+$('select').selectize('options');
+
+
+
 
 //menu open
 $('.menu-open').on('click', function() {

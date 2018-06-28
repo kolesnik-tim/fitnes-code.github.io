@@ -1,0 +1,126 @@
+.schedule
+  padding-bottom: 100px
+  h1
+    padding: 60px 0
+    margin: 0
+  &__block
+    display: flex
+    padding: 0 10px
+    +r(900)
+      flex-wrap: wrap
+      justify-content: space-between
+    +r(767)
+      flex-direction: column
+    &-select
+      height: 40px
+      max-width: 255px
+      width: 100%
+      margin-right: 30px
+      margin-bottom: 20px
+      +r(900)
+        margin: 0 20px 20px
+      +r(767)
+        max-width: 100%
+        margin: 0 !important
+      &:last-child
+        margin: 0
+        +r(900)
+          margin: 0 20px 20px
+  &__slider
+    position: relative
+    margin-top: 50px
+    +r(1100)
+      padding-left: 60px
+    b
+      font-family: 'SF Pro Text'
+      font-size: 18px
+      font-weight: normal
+      font-style: normal
+      line-height: 1.44
+      text-align: center
+      color: $white
+      position: absolute
+      left: 25px
+      width: 48px
+      display: block
+      +r(1100)
+        left: 5px
+      &.morning
+        top: 115px
+      &.dinner
+        top: 50%
+      &.evening
+        bottom: 19%
+    &__icon
+      display: flex
+      justify-content: flex-end
+      i
+        font-size: 20px
+        color: $white
+        margin-left: 10px
+    &__block
+      padding: 10px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      min-height: 130px
+      box-sizing: border-box
+      margin-bottom: 1px
+      &__day
+        padding: 35px 15px
+        display: flex
+        justify-content: center
+        border-bottom: solid 1px $pale-olive
+        &.active
+          background: rgba($apple, 0.1)
+        p
+          font-family: 'SF Pro Text'
+          font-size: 14px
+          font-weight: bold
+          font-style: normal
+          line-height: 1.43
+          text-align: center
+          width: 95px
+          color: $apple
+      &.none
+        background: rgba($white-two, 0.1)
+      &.pool
+        background: #36bb45
+      &.pool-2
+        background: #309dce
+      &.cave
+        background: #de8c2c
+      &.realryder
+        background: #365ddd
+      &.pilates
+        background: #9b4ef0
+      &.pilates-2
+        background: #ded02c
+      h3
+        font-family: 'SF Pro Text'
+        font-size: 18px
+        font-weight: bold
+        font-style: normal
+        line-height: 1.11
+        color: $white
+        min-height: 43px
+        padding-bottom: 5px
+      span
+        font-family: 'SF Pro Text'
+        font-size: 13px
+        font-weight: normal
+        font-style: normal
+        line-height: 1.11
+        color: $white
+        min-height: 40px
+        display: block
+  .swiper-button-next
+    transform: rotate(-180deg)
+    right: 40px
+  .swiper-button-prev
+    left: 40px
+  .swiper-button-prev, .swiper-button-next
+    top: 70px
+    height: 20px
+    i
+      font-size: 20px
