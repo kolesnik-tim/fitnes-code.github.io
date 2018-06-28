@@ -300,3 +300,154 @@
         color: $white
         +r(600)
           font-size: 18px
+
+
+
+.pop-schedule
+  transform: skewX(-6deg)
+  background: $apple
+  border-radius: 0
+  border-top-left-radius: 90px
+  border-bottom-right-radius: 90px
+  padding: 70px 60px
+  max-width: 1120px
+  width: 90%
+  box-shadow: none
+  z-index: 99
+  +r(1024)
+    height: auto
+    width: 100%
+    transform: none
+    padding: 40px 30px
+  a.close-modal
+    display: none !important
+  .close
+    width: 35px
+    height: 35px
+    display: block
+    position: absolute
+    right: 65px
+    top: 19px
+    transform: skewX(6deg)
+    z-index: 999
+    +r(1024)
+      transform: none
+    +r(767)
+      right: 10px
+      top: 10px
+    span
+      width: 30px
+      height: 2px
+      background: $white
+      transform: rotate(45deg)
+      display: block
+      position: relative
+      top: 15px
+      transition: all 0.3s
+      &:before
+        content: ''
+        width: 30px
+        height: 2px
+        background: $white
+        position: absolute
+        left: 0
+        transform: rotate(-90deg)
+        transition: all 0.3s
+  &__content
+    transform: skewX(6deg)
+    display: flex
+    align-items: center
+    height: 100%
+    +r(1024)
+      transform: none
+  &__title
+    h3
+      font-size: 40px
+      font-weight: bold
+      font-style: italic
+      font-stretch: normal
+      line-height: 1.15
+      letter-spacing: 1.3px
+      color: $white
+      margin-bottom: 15px
+    ul
+      margin-bottom: 20px
+    li
+      font-family: 'SF Pro Text'
+      font-size: 18px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.44
+      color: $white
+  &__conditions
+    +r(767)
+      margin-left: 40px
+    p
+      display: flex
+      align-items: center
+      font-family: 'SF Pro Text'
+      font-size: 14px
+      font-weight: normal
+      font-style: normal
+      color: $white
+      padding-bottom: 10px
+      position: relative
+      i
+        font-size: 20px
+        display: block
+        position: absolute
+        left: -30px
+        width: 20px
+        text-align: center
+  &__info
+    margin-bottom: 50px
+    ul
+      list-style: disc
+    li, p
+      font-family: 'SF Pro Text'
+      font-size: 24px
+      font-weight: normal
+      font-style: normal
+      line-height: 1.42
+      color: $white
+      +r(600)
+        font-size: 18px
+  &__img
+    width: 255px
+    height: 255px
+    overflow: hidden
+    border-radius: 50%
+    margin: 0 auto
+    margin-bottom: 30px
+    +r(1200)
+      margin-top: 50px
+    +r(767)
+      width: 200px
+      height: 200px
+    img
+      width: 100%
+      height: 100%
+  &__name
+    +r(1024)
+      margin-bottom: 30px
+    h4
+      font-size: 40px
+      font-weight: bold
+      line-height: 1.15
+      letter-spacing: 1.3px
+      color: $white
+      margin-bottom: 13px
+    p
+      font-family: 'SF Pro Text'
+      font-size: 18px
+      font-weight: normal
+      font-style: normal
+      line-height: 1.44
+      color: $charcoal
+  .btn
+    width: 300px
+    +r(767)
+      width: 96%
+    +r(370)
+      width: 90%
