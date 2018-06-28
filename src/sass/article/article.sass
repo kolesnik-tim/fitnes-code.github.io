@@ -11,34 +11,9 @@
     &__block
       display: flex
       flex-direction: column
-      justify-content: space-between
+      justify-content: center
       height: 100%
-    &__breadcrumbs
-      padding-top: 25px
-      ul
-        display: flex
-        flex-wrap: wrap
-      li
-        position: relative
-        &:after
-          content: '>'
-          position: relative
-          right: 0
-          font-size: 14px
-          font-weight: normal
-          font-style: normal
-          letter-spacing: 0.5px
-          color: $white
-          padding: 0 4px
-        &:last-child
-          &:after
-            display: none
-        a
-          font-size: 14px
-          font-weight: normal
-          font-style: normal
-          letter-spacing: 0.5px
-          color: $white
+      padding-top: 200px
     span
       font-size: 14px
       font-weight: normal
@@ -88,10 +63,33 @@
     display: flex
     padding-top: 30px
     margin-bottom: 300px
+    span
+      font-family: 'SF Pro Text'
+      font-size: 18px
+      font-weight: normal
+      font-style: normal
+      line-height: 1.44
+      color: $charcoal
     a
       margin-right: 10px
-      color: $black
+      color: $apple
       i
-        font-size: 18px
+        font-size: 22px
       &:last-child
         margin-right: 0  
+  &__others
+    padding-top: 130px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      top: -2px
+      width: 700px
+      height: 90px
+      background: $white
+      clip-path: polygon(0 0%, 100% 0%, 100% 100%)
+      +r(767)
+        display: none
+    .heading
+      margin-bottom: 60px

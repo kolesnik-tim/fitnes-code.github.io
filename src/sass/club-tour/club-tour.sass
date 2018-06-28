@@ -24,14 +24,22 @@
         flex-direction: column
         align-items: center
       a
-        font-size: 30px
-        font-weight: normal
-        letter-spacing: 1px
-        color: $apple
-        display: inline-block
-        padding-right: 30px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-right: 50px
+        width: 142px
         +r(500)
           margin-bottom: 10px
+        img
+          margin-bottom: 35px
+        p
+          font-size: 24px
+          font-weight: 600
+          font-style: italic
+          line-height: 1.42
+          letter-spacing: 0.8px
+          color: $white
   &__plan
     background: $white
     padding: 130px 0
@@ -98,12 +106,23 @@
         &.active
           display: block
   &__gallery
-    background: $white
     padding-top: 50px
     padding-bottom: 80px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 700px
+      height: 90px
+      background: $white
+      clip-path: polygon(0 0%, 100% 0%, 100% 100%)
+      +r(767)
+        display: none
     .heading
       p 
-        color: $charcoal
+        color: #dfdfdf
     .swiper
       transform: skewX(-12deg) translate(-50%)
       border-top-left-radius: 80px

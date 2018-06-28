@@ -141,6 +141,7 @@ h1
   border: 1px solid $apple
   border-top: none
 .selectize-input>*, .selectize-dropdown [data-selectable]
+  font-family: 'Uni Sans'
   font-size: 24px
   font-weight: 600
   font-style: italic
@@ -168,3 +169,74 @@ h1
   top: 50%
 .selectize-control.single .selectize-input.input-active, .selectize-input
   background: none
+
+
+
+
+
+
+.scene-primary, .scene-secondary
+  position: absolute
+  top: 300px
+  left: 0
+  width: 100%
+  z-index: -1
+  div
+    display: block
+    font-size: 350px !important
+    font-weight: 900
+    font-style: italic
+    font-stretch: normal
+    line-height: 0.9
+    text-transform: uppercase
+.scene
+  +r(1024)
+    display: none
+  &-primary
+    div
+      color: rgba($nasty-green, 0.7)
+  &-secondary
+    div
+      color: rgba($black-three, 0.7)
+  &-1
+    top: 50px
+    div
+      font-size: 300px !important
+  &-4
+    top: 0px
+  &-5
+    top: 150px
+
+
+
+
+.breadcrumbs
+  display: flex
+  position: fixed
+  left: 30px
+  top: 75%
+  transform-origin: 0px 0px
+  transform: translate(0, -50%) rotate(-90deg)
+  z-index: 11
+  +r(767)
+    display: none
+  a
+    font-size: 12px
+    font-weight: normal
+    font-style: normal
+    color: $apple
+    position: relative
+    padding-right: 10px
+    margin-right: 7px
+    cursor: pointer
+    &:before
+      content: '/'
+      display: block
+      position: absolute
+      right: 0px
+      top: 0
+    &:last-child
+      color: $pale-olive
+      cursor: default
+      &:before
+        content: ''

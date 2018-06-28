@@ -51,6 +51,7 @@ $('.owl-thumb-item').on('click', function() {
  
 });
 
+
 //tabs space
 $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
   $(this)
@@ -58,7 +59,6 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
     .closest('div.tabs').find('div.tabs__content').fadeOut().removeClass('active').eq($(this).index()).fadeIn();
   spaceSlider.update();
 });
-
 //team
 
 var teamSwiper = new Swiper('.swiper-team', {

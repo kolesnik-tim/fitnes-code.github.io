@@ -1,37 +1,50 @@
 .footer
-  background: $pine-green
+  background: $black
   padding: 70px 0
   +r(767)
     padding-bottom: 20px
-  &__map
-    background: $pine-green
-    padding-bottom: 35px
-    margin-bottom: 70px
+  &__content
     border-bottom: 1px solid $apple
+    margin-bottom: 75px
+  &__block
+    max-width: 225px
+    width: 100%
+    margin-right: 10px
+    margin-bottom: 40px
+  &__top, &__bottom
+    display: flex
+    justify-content: space-between
+    +r(1024)
+      flex-wrap: wrap
     h4
+      font-size: 24px
+      font-weight: 600
+      font-style: italic
+      line-height: 1.42
+      letter-spacing: 0.8px
+      color: $apple
+      margin-bottom: 20px
       a
         font-size: 24px
         font-weight: 600
+        font-style: italic
         line-height: 1.42
         letter-spacing: 0.8px
         color: $apple
-        margin-bottom: 15px
-        padding-top: 10px
-        display: block
-    ul
-      margin-bottom: 30px
-      li
-        a
-          font-family: 'SF Pro Text'
-          font-size: 18px
-          font-weight: normal
-          font-style: normal
-          line-height: 1.44
-          letter-spacing: 0.6px
-          color: $pale-olive
-    &__map
-      margin-top: 25px
+    li
       display: block
+      padding: 8px 0
+    a
+      font-family: 'SF Pro Display'
+      font-size: 18px
+      font-weight: normal
+      font-style: normal
+      letter-spacing: 0.6px
+      color: $pale-olive
+      display: block
+      line-height: 1.1
+    li:hover
+      color: rgba($apple, 0.4)
   &__logo
     max-width: 160px
     +r(767)

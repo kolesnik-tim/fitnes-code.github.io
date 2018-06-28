@@ -1,0 +1,121 @@
+---
+title: Услуги
+services: team--services-card
+calendar: boxing
+---
+extends layouts/_layout
+block content
+  +breadcrumbs(['FitnessCode', 'Услуги', 'Студия бокса и функуионального тренинга'])
+  .saline-room
+    .container
+      .saline-room__title
+        h1 Студия бокса и функционального тренинга
+        p Функциональные тренировки помогают улучшить способность человека совершать действия при различных обстоятельствах в повседневной жизни
+      .row
+        .col-sm-4.col-xs-12
+          .saline-room__block
+            .saline-room__block__img
+              img(src="img/micro.svg", alt="")
+            p Улучшает гормональный фон
+        .col-sm-4.col-xs-12
+          .saline-room__block
+            .saline-room__block__img
+              img(src="img/imun.svg", alt="")
+            p Укрепляет иммунитет
+        .col-sm-4.col-xs-12
+          .saline-room__block
+            .saline-room__block__img
+              img(src="img/wind.svg", alt="")
+            p Создаёт эффект морского бриза
+  .feel
+    .container
+      .row
+        .col-xs-12
+          .heading.heading-primary
+            h2 Отточенные движения
+        .col-sm-4.col-xs-12
+          p Развитие выносливости в сочетании со здоровым образом жизни позволяют человеку вести максимально активный образ жизни
+        .col-sm-8.col-xs-12.start-sm.center-xs
+          .feel__video
+            a(href="#")
+              img(src="img/women-relaxing-in-a-salt-cave-at-a-halotherapy-354219518.png")
+              i.icon.icon-play
+  .features
+    .container
+      .row
+        .col-xs-12
+          .heading.heading-secondary
+            h2 Занятия
+    .features__block
+      .row
+        .col-sm-6.col-xs-12
+          .features__block__img.features__block__img-primary
+            .features__block__img__content
+              img(src="img/shutterstock-657941563.png", alt="")
+        .col-sm-6.col-xs-12
+          .features__block__text
+            h3 Групповые тренировки по боксу
+            p Посещение соляной пещеры позволяет восполнить недостаток микроэлементов в организме, который возникает у жителей средней полосы
+            a(href="#").btn.btn-primary Подробнее
+    .features__block
+      .row
+        .col-sm-6.col-xs-12.first-sm
+          .features__block__text.features__block__text-secondary
+            h3 Групповые занятия функционального тренинга
+            p Рекомендуется тем, у кого диагностированы хронические ларингиты, ангина, бронхиальная астма, проблемы с щитовидной железой
+            a(href="#").btn.btn-primary Подробнее
+        .col-sm-6.col-xs-12.first-xs
+          .features__block__img.features__block__img-secondary
+            .features__block__img__content
+              img(src="img/shutterstock-657941563.png", alt="")
+    .features__block
+      .row
+        .col-sm-6.col-xs-12
+          .features__block__img.features__block__img-primary
+            .features__block__img__content
+              img(src="img/shutterstock-657941563.png", alt="")
+        .col-sm-6.col-xs-12
+          .features__block__text
+            h3 Восточные единоборства
+            p Сочетание морского бриза, современной электроники и природных материалов
+            a(href="#").btn.btn-primary Подробнее
+  include ./schedule/schedule
+  .features
+    .container
+      .row
+        .col-xs-12
+          .heading.heading-secondary
+            h2 Особенности
+    .features__block
+      .row
+        .col-sm-6.col-xs-12
+          .features__block__img.features__block__img-primary
+            .features__block__img__content
+              img(src="img/shutterstock-657941563.png", alt="")
+        .col-sm-6.col-xs-12
+          .features__block__text
+            h3 Современные снаряды
+            p Посещение соляной пещеры позволяет восполнить недостаток микроэлементов в организме, который возникает у жителей средней полосы
+    .features__block
+      .row
+        .col-sm-6.col-xs-12.first-sm
+          .features__block__text.features__block__text-secondary
+            h3 Улучшение <br>физических характеристик
+            p Рекомендуется тем, у кого диагностированы хронические ларингиты, ангина, бронхиальная астма, проблемы с щитовидной железой
+        .col-sm-6.col-xs-12.first-xs
+          .features__block__img.features__block__img-secondary
+            .features__block__img__content
+              img(src="img/shutterstock-657941563.png", alt="")
+    .features__block
+      .row
+        .col-sm-6.col-xs-12
+          .features__block__img.features__block__img-primary
+            .features__block__img__content
+              img(src="img/shutterstock-657941563.png", alt="")
+        .col-sm-6.col-xs-12
+          .features__block__text
+            h3 Современные снаряды
+            p Посещение соляной пещеры позволяет восполнить недостаток микроэлементов в организме, который возникает у жителей средней полосы
+  include ./home/team
+  include ./home/code
+  include ./partials/_pop-up

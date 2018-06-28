@@ -4,6 +4,7 @@ contacts: contacts-page
 ---
 extends layouts/_layout
 block content
+  +breadcrumbs(['FitnessCode', 'Контакты'])
   include ./home/contacts
   include ./home/map
   include ./partials/_pop-up

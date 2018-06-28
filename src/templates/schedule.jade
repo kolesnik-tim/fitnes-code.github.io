@@ -3,11 +3,6 @@ title: Расписание
 ---
 extends layouts/_layout
 block content
-  .schedule
-    .container
-      .row
-        .col-xs-12
-          .schedule__title
-            h1 Расписание
-    include ./schedule/schedule
+  +breadcrumbs(['FitnessCode', 'Расписание'])
+  include ./schedule/schedule
   include ./partials/_pop-up

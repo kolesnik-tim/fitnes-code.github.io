@@ -3,6 +3,7 @@ title: Тур по клубу
 ---
 extends layouts/_layout
 block content
+  +breadcrumbs(['FitnessCode', 'Тур по клубу'])
   .club-tour__intro
     .container
       .row
@@ -10,13 +11,17 @@ block content
           h1 Тур по клубу
           p Четыре этажа спорта, здоровья и релакса для каждого. Единственный клуб в городе с техникой, которую только начали продавать.
           .club-tour__intro__nav.nav
-            a(href="#plan") Схема клуба
-            a(href="#gallery") Галерея
+            a(href="#plan") 
+              img(src="img/plan.svg", alt="")
+              p Схема клуба
+            a(href="#gallery") 
+              img(src="img/photo.svg", alt="")
+              p Галерея
   .about__place
     .container
       .row
         .col-xs-12
-          .heading.heading-secondary
+          .heading.heading-primary
             h2 Единственный во Фрязино
         .col-sm-4.col-xs-12
           span 16
@@ -61,7 +66,7 @@ block content
     .container
       .row
         .col-xs-12
-          .heading.heading-secondary
+          .heading.heading-ptimary
             h2 Галерея
             p Мы старались собрать универсальную команду, которая могла бы работать по всем востребованным сегментам фитнеса.
     .swiper

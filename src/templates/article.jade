@@ -3,19 +3,10 @@ title: Статьи
 ---
 extends layouts/_layout
 block content
+  +breadcrumbs(['FitnessCode', 'Пресс-зона', 'Статьи', 'Почувствуй себя на коне'])
   .article__intro
     .container
       .article__intro__block
-        .article__intro__breadcrumbs
-          ul
-            li
-              a(href="") fitnesscode
-            li
-              a(href="") пресс-зона
-            li
-              a(href="") статьи
-            li
-              a(href="") Груз ответственности
         .article__intro__title
           span 05/06/18
           h1 Почувствуй себя на коне
@@ -65,6 +56,7 @@ block content
                 i.icon.icon-fb
               a(href="#")
                 i.icon.icon-ok
+  .article__others
     .row
       .col-xs-12
         .container

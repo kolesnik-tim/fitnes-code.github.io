@@ -3,6 +3,7 @@ title: Услуги
 ---
 extends layouts/_layout
 block content
+  +breadcrumbs(['FitnessCode', 'Услуги'])
   .services-intro
     .container
       .row
@@ -10,15 +11,24 @@ block content
           h1 Услуги
           p Три направления нашего клуба на полное раскрытие кода вашей личности
           .services-intro__nav.nav
-            a(href="#sport") Спорт
-            a(href="#health") Здоровье
-            a(href="#beauty") Красота
+            a(href="#sport") 
+              img(src="img/prime-wt.svg", alt="")
+              p Фитнес-зоны
+            a(href="#health")
+              img(src="img/prime-wt.svg", alt="")
+              p Занятия
+            a(href="#beauty")
+              img(src="img/prime-wt.svg", alt="")
+              p Красота и здоровье
+            a(href="#facilities")
+              img(src="img/prime-wt.svg", alt="")
+              p Удобства
   .sport#sport
     .container
       .row
         .col-xs-12
           .heading.heading-secondary
-            h2 Спорт
+            h2 Фитнес-зоны
             p Четыре этажа спорта, здоровья и релакса для каждого. Единственный клуб в городе с техникой, которую только начали продавать.
     .row
       .col-sm-6.col-xs-12
@@ -96,7 +106,7 @@ block content
       .row
         .col-xs-12
           .heading.heading-secondary
-            h2 Здоровье
+            h2 Занятия
             p Четыре этажа спорта, здоровья и релакса для каждого. Единственный клуб в городе с техникой, которую только начали продавать.
     .row
       .col-sm-6.col-xs-12
@@ -139,7 +149,36 @@ block content
       .row
         .col-xs-12
           .heading.heading-secondary
-            h2 Красота
+            h2 Красота и здоровье
+            p Четыре этажа спорта, здоровья и релакса для каждого. Единственный клуб в городе с техникой, которую только начали продавать.
+    .row
+      .col-sm-6.col-xs-12
+        .block-article.block-article-left
+          .block-article__content(style="background-image: url(img/services/salt-room-applying-salt-therapy-in-the-spa-607780880.png)")
+            .block-article__title
+              h4 
+                a(href="#") Бассейн и полный цикл аквааэробики
+              p Посещение соляной пещеры позволяет восполнить недостаток микроэлементов в организме, который возникает у жителей средней полосы
+      .col-sm-6.col-xs-12
+        .block-article.block-article-right
+          .block-article__content(style="background-image: url(img/services/bg-sport.png)")
+            .block-article__title
+              h4 
+                a(href="#") Бассейн и полный цикл аквааэробики
+              p Посещение соляной пещеры позволяет восполнить недостаток микроэлементов в организме, который возникает у жителей средней полосы
+      .col-sm-6.col-xs-12
+        .block-article.block-article-left
+          .block-article__content(style="background-image: url(img/services/salt-room-applying-salt-therapy-in-the-spa-607780880.png)")
+            .block-article__title
+              h4 
+                a(href="#") Бассейн и полный цикл аквааэробики
+              p Посещение соляной пещеры позволяет восполнить недостаток микроэлементов в организме, который возникает у жителей средней полосы
+  .facilities#facilities
+    .container
+      .row
+        .col-xs-12
+          .heading.heading-secondary
+            h2 Удобства
             p Четыре этажа спорта, здоровья и релакса для каждого. Единственный клуб в городе с техникой, которую только начали продавать.
     .row
       .col-sm-6.col-xs-12

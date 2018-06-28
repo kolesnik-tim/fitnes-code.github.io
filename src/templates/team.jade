@@ -4,7 +4,10 @@ codeClass: code-club
 ---
 extends layouts/_layout
 block content
+  +breadcrumbs(['FitnessCode', 'Тренерский состав'])
   .team-page
+    .scene-secondary.scene-6(data-invert-x="false" data-invert-y="false")
+      div(data-depth="0.2")  Тренерский Состав
     .container
       .row
         .col-xs-12.center-xs
