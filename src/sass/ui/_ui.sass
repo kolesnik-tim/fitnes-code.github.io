@@ -30,6 +30,8 @@ a
 
 .out
   margin-top: 100px
+  +r(767)
+    margin-top: 60px
 h1
   font-weight: bold
   line-height: 1
@@ -40,6 +42,7 @@ h1
   margin-bottom: 85px
   +r(767)
     font-size: 50px
+    margin-top: 50px
 .heading
   h2
     font-size: 80px
@@ -181,6 +184,8 @@ h1
   left: 0
   width: 100%
   z-index: -1
+  +r(767)
+    display: none
   div
     display: block
     font-size: 350px !important
@@ -211,13 +216,15 @@ h1
 
 
 .breadcrumbs
-  display: flex
   position: fixed
   left: 30px
-  top: 75%
+  bottom: 0
   transform-origin: 0px 0px
-  transform: translate(0, -50%) rotate(-90deg)
-  z-index: 11
+  transform: rotate(-90deg)
+  z-index: 9
+  display: flex
+  justify-content: center
+  width: calc(100vh - 100px)
   +r(767)
     display: none
   a

@@ -1,5 +1,7 @@
 .articles-list
   padding-top: 60px
+  +r(767)
+    padding-top: 0
   h1
     margin-bottom: 40px
   &__filter
@@ -17,6 +19,11 @@
       padding: 7px 10px
       margin-right: 20px
       margin-bottom: 10px
+      &:hover
+        background: rgba(#7bcc48, 0.5)
+      &.active
+        background: $apple
+        color: $white
       +r(767)
         width: 100%
         margin-right: 0

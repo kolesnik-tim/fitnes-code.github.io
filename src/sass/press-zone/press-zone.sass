@@ -10,6 +10,7 @@
     background-repeat: no-repeat
     background-size: cover
     background-position: 50% 50%
+    background-attachment: fixed
     p
       font-size: 30px
       font-weight: normal
@@ -51,8 +52,19 @@
       height: 390px
       +center
       position: relative
-      background-repeat: no-repeat
-      background-size: cover
+      overflow: hidden
+      p
+        background-repeat: no-repeat
+        background-size: cover
+        transition: all 0.3s
+        position: absolute
+        width: 100%
+        height: 100%
+      &:hover
+        p
+          transform: scale(1.1)
+        a
+          opacity: 0
       a
         font-size: 40px
         font-weight: bold
@@ -67,8 +79,9 @@
         height: 100%
         +center
         background: rgba($apple, 0.7)
+        transition: all 0.3s
         +r(1024)
-          padding: 0
+          padding: 0 10px
   &__articles
     padding: 100px 0
     overflow: hidden

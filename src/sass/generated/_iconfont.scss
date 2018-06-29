@@ -20,10 +20,13 @@ $icon-note-wt: "\EA08";
 $icon-ok: "\EA09";
 $icon-page-1: "\EA0A";
 $icon-person: "\EA0B";
-$icon-play: "\EA0C";
-$icon-usd-wt: "\EA0D";
-$icon-vk: "\EA0E";
-$icon-yt: "\EA0F";
+$icon-photo: "\EA0C";
+$icon-plan: "\EA0D";
+$icon-play: "\EA0E";
+$icon-prime-wt: "\EA0F";
+$icon-usd-wt: "\EA10";
+$icon-vk: "\EA11";
+$icon-yt: "\EA12";
 
 
 %icon {
@@ -53,7 +56,10 @@ $icon-yt: "\EA0F";
 .icon-ok:before { content: $icon-ok; }
 .icon-page-1:before { content: $icon-page-1; }
 .icon-person:before { content: $icon-person; }
+.icon-photo:before { content: $icon-photo; }
+.icon-plan:before { content: $icon-plan; }
 .icon-play:before { content: $icon-play; }
+.icon-prime-wt:before { content: $icon-prime-wt; }
 .icon-usd-wt:before { content: $icon-usd-wt; }
 .icon-vk:before { content: $icon-vk; }
 .icon-yt:before { content: $icon-yt; }

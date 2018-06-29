@@ -7,23 +7,21 @@
   background-size: cover
   background-position: 50% 50%
   position: relative
-  &:before
-    content: ''
-    position: absolute
+  background-attachment: fixed !important
+  +r(767)
+    min-height: auto
+  .scene-card
+    position: absolute !important
     top: 50%
-    transform: translate(0, -50%)
-    width: 340px
-    height: 385px
-    background: url('../img/bitmap.png')
-    background-size: contain
-    background-repeat: no-repeat
+    transform: translate(0, -50%) !important
     right: 10%
     z-index: 2
     +r(1024)
       right: 0px
     +r(767)
-      width: 240px
-      height: 285px
+      img
+        width: 240px
+        height: 285px
   h1
     max-width: 415px
     position: relative

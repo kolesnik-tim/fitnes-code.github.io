@@ -1,6 +1,8 @@
 .team-page
   padding-top: 100px
   overflow: hidden
+  +r(767)
+    padding-top: 0
   &__filter
     ul
       width: 100%
@@ -13,14 +15,16 @@
         margin-bottom: 20px
         a
           color: $pale-olive
-          padding: 8px 12px
+          padding: 8px 27px 6px
           display: inline-block
-          font-size: 24px
+          font-size: 18px
           font-weight: normal
           font-style: normal
           color: $pale-olive
           +r(767)
             font-size: 15px
+        &:hover
+          background: rgba(#7bcc48, 0.5)
         &.active
           background: $apple
           a
@@ -56,6 +60,8 @@
         .team-page__block__img
           position: relative
           left: 85%
+          +r(1024)
+            left: 0
     &-slide
       display: flex
       flex-direction: column
@@ -63,6 +69,8 @@
       .team-page__block
         margin-bottom: 80px
         display: flex
+        +r(767)
+          flex-direction: column
         &__img
           overflow: hidden
           width: 200px

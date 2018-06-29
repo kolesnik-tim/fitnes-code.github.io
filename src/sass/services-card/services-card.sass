@@ -3,19 +3,25 @@
   padding-bottom: 100px
   background: url('../img/shutterstock-657941563.png') no-repeat
   background-size: cover
+  background-attachment: fixed
   +r(767)
     padding-bottom: 30px
+    padding-top: 0
   &__title
+    +r(767)
+      padding-top: 1px
     p
       font-size: 30px
       font-weight: normal
       line-height: 1.33
       letter-spacing: 1px
       color: $white
-      margin-bottom: 55px
+      margin-bottom: 80px
       max-width: 735px
       +r(767)
         font-size: 20px
+    h1
+      margin-bottom: 60px
   &__block
     +r(767)
       +center
@@ -135,7 +141,7 @@
       padding-left: 10px
       +r(767)
         max-width: 100%
-        margin-top: 15px
+        margin-top: 35px
       &-secondary
         position: relative
         left: 100%

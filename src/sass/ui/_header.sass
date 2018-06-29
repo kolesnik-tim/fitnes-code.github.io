@@ -10,8 +10,14 @@
   align-items: center
   z-index: 11
   transition: all 0.3s
+  +r(767)
+    height: 60px
   .container
     max-width: 1100px
+  &.scroll
+    background: rgba($black, 0.1)
+    .header__logo
+      opacity: 0
   &.bg
     background: url('')
     .header__user
@@ -24,6 +30,9 @@
     font-style: italic
     color: $apple
     line-height: 30px
+  &__logo
+    margin-bottom: -10px
+    transition: all 0.3s
   &__block
     display: flex
     align-items: center

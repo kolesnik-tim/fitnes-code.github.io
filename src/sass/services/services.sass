@@ -7,7 +7,11 @@
   background: url('../img/bg-services.png')
   background-repeat: no-repeat
   background-size: cover
-  background-position: 50% 50%
+  background-position: 50% 0%
+  background-attachment: fixed
+  padding-top: 70px
+  +r(767)
+    padding-top: 0
   p
     font-size: 30px
     font-weight: normal
@@ -18,16 +22,22 @@
     margin-bottom: 130px
   &__nav
     display: flex
-    margin-bottom: 100px
     +r(700)
       flex-direction: column
       align-items: center
+    i
+      font-size: 100px
+      color: $white
+      transition: all 0.3s
     a
       display: inline-block
       margin-right: 30px
       width: 160px
       +r(500)
         margin-bottom: 10px
+      &:hover
+        i
+          color: $apple
       p
         font-size: 24px
         font-weight: 600
@@ -35,6 +45,7 @@
         font-stretch: normal
         line-height: 1.42;
         letter-spacing: 0.8px
+        transition: all 0.3s
         color: $white
 .sport, .health, .beauty
   position: relative
