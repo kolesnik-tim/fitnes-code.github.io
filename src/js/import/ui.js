@@ -2,6 +2,11 @@ import 'jquery-modal';
 import Swiper from 'swiper';
 import teamSwiper from './slider';
 import '../lib/selectize.min';
+// import WOW from 'wowjs';
+
+
+//wow
+new WOW().init();
 
 
 //select

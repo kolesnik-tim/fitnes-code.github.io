@@ -17,10 +17,11 @@
     min-height: 400px
     width: 110%
     padding-top: 40px
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: 50% 50%
     margin-left: -15px
+    position: relative
+    overflow: hidden
+    display: flex
+    align-items: center
     +r(1024)
       transform: none
       width: 100% !important
@@ -28,7 +29,27 @@
       margin-left: 0
     +r(767)
       min-height: 100%
-
+    p.bg
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: 50% 50%
+      position: absolute
+      top: 0
+      width: 100%
+      height: 100%
+      transition: all 0.3s
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        background: rgba($apple, 0.2)
+    &:hover
+      p.bg
+        transform: scale(1.1)
+        &:before
+          opacity: 0
   &-left
     left: -40px
     border-bottom-right-radius: 90px
@@ -117,3 +138,16 @@
         margin-left: 100px !important
       +r(767)
         margin-left: 10px !important
+
+
+.services-block
+  .block-article
+    h4
+      text-align: center
+      transition: all 0.3s
+      a
+        color: $black
+        font-size: 40px
+    &:hover
+      h4
+        opacity: 0
