@@ -31,9 +31,10 @@
             option(value="3") 10:00
             option(value="4") 17:00
       .schedule__slider
-        b.morning 8:00
-        b.dinner 10:00
-        b.evening 17:00
+        b 8:00
+        b 10:00
+        b 13:00
+        b 17:00
         .container
           .swiper-container.swiper-schedule
             .swiper-wrapper
@@ -51,6 +52,12 @@
                   .schedule__slider__block__text
                     h3 BODYFLEX
                     span Соляная пещера
+                a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__evening.realryder
+                  .schedule__slider__block__text
+                    h3 REALRYDE
+                    span Студия RealRyder
+                  .schedule__slider__icon
+                    i.icon.icon-note-wt
                 a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__evening.realryder
                   .schedule__slider__block__text
                     h3 REALRYDE
