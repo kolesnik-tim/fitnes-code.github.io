@@ -156,3 +156,40 @@ var teamSwiper = new Swiper('.swiper-schedule', {
     prevEl: '.swiper-schedule-left',
   },
 });
+
+
+
+//cabinet
+
+var cabinetSlider = new Swiper('.swiper-cabinet', {
+  slidesPerView: 4,
+  spaceBetween: 1,
+  breakpoints: {
+    480: {
+      slidesPerView: 1,
+    },
+    850: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+  navigation: {
+    nextEl: '.swiper-cabinet-right',
+    prevEl: '.swiper-cabinet-left',
+  },
+});
+
+
+//tabs cabinet
+$('ul.tabs__caption-1').on('click', 'li:not(.active)', function() {
+  let th = $(this);
+  $(this)
+    .addClass('active').siblings().removeClass('active')
+    .closest('div.tabs').find('div.tabs__content-1').fadeOut().removeClass('active');
+  setTimeout(function() {
+    $(th).closest('div.tabs').find('div.tabs__content-1').eq($(th).index()).fadeIn();
+    cabinetSlider.update();
+  }, 400);
+});

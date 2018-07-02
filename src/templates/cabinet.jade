@@ -3,193 +3,234 @@ title: Кабинет
 ---
 extends layouts/_layout
 block content
-  .cabinet__intro
+  .cabinet
     .container
-      .cabinet__intro__title
-        h1 Личный кабинет
-        ul
-          li
+      h1 Личный кабинет
+      .tabs
+        ul.tabs__caption-1
+          li.active
             a(href="#") Личные данные
           li
             a(href="#") Пакет услуг
           li
             a(href="#") История посещений
           li
-            a(href="#") Бронирование занятий
-  .cabinet__content
-    .container
-      .cabinet__content__block
-        h2 Личный кабинет
-        .tabs
-          ul.tabs__caption-1
-            li.active Личные данные
-            li Членства, пакеты услуг
-            li История посещений
-            li Бронирование заданий
-            li Магазин
-          .tabs__content-1.active
-            ul
-              li 
-                p Фамилия:
-                p 
-              li
-                p Имя:
-                p 
-              li 
-                p Отчество:
-                p 
-              li 
-                p Пол:
-                p
-              li
-                p Дата рождения:
-                p 
-              li
-                p Телефон:
-                p 
-              li
-                p Телефон доп.:
-                p 
-              li
-                p E-Mail:
-                p 
-              li 
-                p Автомобили:
-                p 
-              li
-                p Остаток на ЛС:
-                p 0.0 руб. 
-                  a(href="#") пополнить
-          .tabs__content-1
-            ul
-              li 
-                p Фамилия:
-                p 
-              li
-                p Имя:
-                p 
-              li 
-                p Отчество:
-                p 
-              li 
-                p Пол:
-                p
-              li
-                p Дата рождения:
-                p 
-              li
-                p Телефон:
-                p 
-              li
-                p Телефон доп.:
-                p 
-              li
-                p E-Mail:
-                p 
-              li 
-                p Автомобили:
-                p 
-              li
-                p Остаток на ЛС:
-                p 0.0 руб. 
-                  a(href="#") пополнить
-          .tabs__content-1
-            ul
-              li 
-                p Фамилия:
-                p 
-              li
-                p Имя:
-                p 
-              li 
-                p Отчество:
-                p 
-              li 
-                p Пол:
-                p
-              li
-                p Дата рождения:
-                p 
-              li
-                p Телефон:
-                p 
-              li
-                p Телефон доп.:
-                p 
-              li
-                p E-Mail:
-                p 
-              li 
-                p Автомобили:
-                p 
-              li
-                p Остаток на ЛС:
-                p 0.0 руб. 
-                  a(href="#") пополнить
-          .tabs__content-1
-            ul
-              li 
-                p Фамилия:
-                p 
-              li
-                p Имя:
-                p 
-              li 
-                p Отчество:
-                p 
-              li 
-                p Пол:
-                p
-              li
-                p Дата рождения:
-                p 
-              li
-                p Телефон:
-                p 
-              li
-                p Телефон доп.:
-                p 
-              li
-                p E-Mail:
-                p 
-              li 
-                p Автомобили:
-                p 
-              li
-                p Остаток на ЛС:
-                p 0.0 руб. 
-                  a(href="#") пополнить
-          .tabs__content-1
-            ul
-              li 
-                p Фамилия:
-                p 
-              li
-                p Имя:
-                p 
-              li 
-                p Отчество:
-                p 
-              li 
-                p Пол:
-                p
-              li
-                p Дата рождения:
-                p 
-              li
-                p Телефон:
-                p 
-              li
-                p Телефон доп.:
-                p 
-              li
-                p E-Mail:
-                p 
-              li 
-                p Автомобили:
-                p 
-              li
-                p Остаток на ЛС:
-                p 0.0 руб. 
-                  a(href="#") пополнить
+            a(href="#") Ваши занятия
+        .tabs__content-1.active
+          .cabinet__block
+            .row
+              .col-sm-8.col-xs-12
+                span 4515 
+                p Номер карты
+                span Active
+                p Статус карты
+              .col-sm-4.col-xs-12
+                span.gren 1 282руб.
+                p Баланс
+          .cabinet__block
+            .row
+              .col-sm-8.col-xs-12
+                span Иванов Дмитрий Сегеевич
+                p Ф.И.О.
+                span +7 987 788 12 45
+                p Телефон
+                span ds.ivanov@mail.ru
+                p Электронная почта
+              .col-sm-4.col-xs-12
+                span 12.09.1983
+                p Дата рождения
+                span Мужской
+                p Пол
+          .cabinet__block
+            span Изменить пароль
+            .row
+              .col-sm-8.col-xs-12
+                input(type="password" placeholder="*********")
+                p Старый пароль
+              .col-sm-4.col-xs-12
+                input(type="password" placeholder="*********")
+                p Новый пароль
+            a(href="#").btn.btn-primary Сохранить
+        .tabs__content-1
+        .tabs__content-1
+          .history
+            .history__block
+              .history__block__select
+                select
+                  option(value="1") Май
+                  option(value="2") 8:00
+                  option(value="3") 10:00
+                  option(value="4") 17:00
+              .history__block__select
+                select
+                  option(value="1") 2018
+                  option(value="2") 2019
+                  option(value="3") 10:00
+                  option(value="4") 17:00
+            .table__content
+              table.table
+                tr
+                  td 10 мая
+                  td BODYFLEX (соляная пищера) 
+                  td 
+                    p start: 16:23
+                    p stop: 17:12
+                tr
+                  td 10 мая
+                  td AQUA START (бассейн) 
+                  td 
+                    p start: 16:23
+                    p stop: 17:12
+                tr
+                  td 10 мая
+                  td BODYFLEX (соляная пищера) 
+                  td 
+                    p start: 16:23
+                    p stop: 17:12
+                tr
+                  td 10 мая
+                  td BODYFLEX (соляная пищера) 
+                  td 
+                    p start: 16:23
+                    p stop: 17:12
+                tr
+                  td 10 мая
+                  td BODYFLEX (соляная пищера) 
+                  td 
+                    p start: 16:23
+                    p stop: 17:12
+        .tabs__content-1
+          .schedule__slider
+            b.morning 8:00
+            b.dinner 10:00
+            b.evening 17:00
+            .swiper-container.swiper-cabinet
+              .swiper-wrapper
+                .swiper-slide
+                  .schedule__slider__block__day.active
+                    p 14 июня, Четверг
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__morning.pool.deactivation
+                    .schedule__slider__block__text
+                      h3 AQUA START
+                      span Бассейн
+                    .schedule__slider__icon
+                      i.icon.icon-usd-wt
+                      i.icon.icon-note-wt
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__dinner.cave
+                    .schedule__slider__block__text
+                      h3 BODYFLEX
+                      span Соляная пещера
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__evening.realryder.deactivation
+                    .schedule__slider__block__text
+                      h3 REALRYDE
+                      span Студия RealRyder
+                    .schedule__slider__icon
+                      i.icon.icon-note-wt
+                .swiper-slide
+                  .schedule__slider__block__day
+                    p 15 декабрь, Пятница
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__morning.pilates
+                    .schedule__slider__block__text
+                      h3 PILATES
+                      span Студия пилатес
+                    .schedule__slider__icon
+                      i.icon.icon-note-wt
+                  a(href="#").schedule__slider__block.schedule__slider__block__dinner.none
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__evening.pilates-2
+                    .schedule__slider__block__text
+                      h3 PILATES STUDIO
+                      span Студия пилатес
+                    .schedule__slider__icon
+                      i.icon.icon-usd-wt
+                      i.icon.icon-note-wt
+                .swiper-slide
+                  .schedule__slider__block__day
+                    p 16 октябрь, Суббота
+                  a.schedule__slider__block.schedule__slider__block__morning
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__dinner.pool-2
+                    .schedule__slider__block__text
+                      h3 AQUA NODELES
+                      span Бассейн
+                  a.schedule__slider__block.schedule__slider__block__evening
+                .swiper-slide
+                  .schedule__slider__block__day
+                    p 16 октябрь, Суббота
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__morning.pool
+                    .schedule__slider__block__text
+                      h3 AQUA START
+                      span Бассейн
+                    .schedule__slider__icon
+                      i.icon.icon-note-wt
+                  a(href="#").schedule__slider__block.schedule__slider__block__dinner.none
+                  a.schedule__slider__block.schedule__slider__block__evening
+                .swiper-slide
+                  .schedule__slider__block__day
+                    p 16 октябрь, Суббота
+                  a.schedule__slider__block.schedule__slider__block__morning
+                  a(href="#").schedule__slider__block.schedule__slider__block__dinner.none
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__evening.cave
+                    .schedule__slider__block__text
+                      h3 BODYFLEX
+                      span Соляная пещера
+                .swiper-slide
+                  .schedule__slider__block__day
+                    p 14 июня, Четверг
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__morning.pool
+                    .schedule__slider__block__text
+                      h3 AQUA START
+                      span Бассейн
+                    .schedule__slider__icon
+                      i.icon.icon-usd-wt
+                      i.icon.icon-note-wt
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__dinner.cave
+                    .schedule__slider__block__text
+                      h3 BODYFLEX
+                      span Соляная пещера
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__evening.realryder
+                    .schedule__slider__block__text
+                      h3 BODYFLEX
+                      span Соляная пещера
+                    .schedule__slider__icon
+                      i.icon.icon-note-wt
+                .swiper-slide
+                  .schedule__slider__block__day
+                    p 15 декабрь, Пятница
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__morning.pilates
+                    .schedule__slider__block__text
+                      h3 PILATES
+                      span Студия пилатес
+                    .schedule__slider__icon
+                      i.icon.icon-note-wt
+                  a(href="#").schedule__slider__block.schedule__slider__block__dinner.none
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__evening.pilates-2
+                    .schedule__slider__block__text
+                      h3 PILATES STUDIO
+                      span Студия пилатес
+                    .schedule__slider__icon
+                      i.icon.icon-usd-wt
+                      i.icon.icon-note-wt
+                .swiper-slide
+                  .schedule__slider__block__day
+                    p 16 октябрь, Суббота
+                  a.schedule__slider__block.schedule__slider__block__morning
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__dinner.pool-2
+                    .schedule__slider__block__text
+                      h3 AQUA NODELES
+                      span Бассейн
+                  a.schedule__slider__block.schedule__slider__block__evening
+                .swiper-slide
+                  .schedule__slider__block__day
+                    p 16 октябрь, Суббота
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__morning.pool
+                    .schedule__slider__block__text
+                      h3 AQUA START
+                      span Бассейн
+                    .schedule__slider__icon
+                      i.icon.icon-note-wt
+                  a(href="#").schedule__slider__block.schedule__slider__block__dinner.none
+                  a.schedule__slider__block.schedule__slider__block__evening
+            .swiper-button-next.swiper-cabinet-right
+              i.icon.icon-left
+            .swiper-button-prev.swiper-cabinet-left
+              i.icon.icon-left
   include ./partials/_pop-up

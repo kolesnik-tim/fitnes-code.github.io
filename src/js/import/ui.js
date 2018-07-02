@@ -133,18 +133,6 @@ $('.swiper-team a[rel]').click(function(event) {
   return false;
 });
 
-//tabs cabinet
-$('ul.tabs__caption-1').on('click', 'li:not(.active)', function() {
-  let th = $(this);
-  $(this)
-    .addClass('active').siblings().removeClass('active')
-    .closest('div.tabs').find('div.tabs__content-1').fadeOut().removeClass('active');
-  setTimeout(function() {
-    $(th).closest('div.tabs').find('div.tabs__content-1').eq($(this).index()).fadeIn();
-  }, 300);
-  
-  spaceSlider.update();
-});
 
 // Сварачивающиеся блоки
 $('.space__floor').click(function() {
