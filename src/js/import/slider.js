@@ -75,7 +75,7 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 var teamSwiper = new Swiper('.swiper-team', {
   slidesPerView: 3,
   spaceBetween: 30,
-  loop: true,
+  // loop: true,
   on: {
     init: function() {
       $('.swiper-team .swiper-slide-active').prev().addClass('prev');
