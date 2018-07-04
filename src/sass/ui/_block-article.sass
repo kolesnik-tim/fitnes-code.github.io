@@ -29,6 +29,13 @@
       margin-left: 0
     +r(767)
       min-height: 100%
+    a.btn
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%) skewX(-11deg)
+      z-index: 99
+      opacity: 0
     p.bg
       background-repeat: no-repeat
       background-size: cover
@@ -49,7 +56,9 @@
       p.bg
         transform: scale(1.1)
         &:before
-          opacity: 0
+          opacity: 1
+      a.btn
+        opacity: 1
   &-left
     left: -40px
     border-bottom-right-radius: 90px

@@ -53,6 +53,15 @@ $('.header__services p').on('click', function() {
 });
 
 
+$(document).mouseup(function(e) {
+  var block = $('.header__services__option, .header__services');
+  if (!block.is(e.target) && block.has(e.target).length === 0) { 
+    $('.header__services__option').fadeOut();
+    $('.header__services p').toggleClass('active');
+  }
+});
+
+
 //menu open
 $('.menu-open').on('click', function() {
   event.preventDefault();
