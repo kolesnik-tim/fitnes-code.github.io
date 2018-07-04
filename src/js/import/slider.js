@@ -56,10 +56,20 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
   $(this)
     .addClass('active').siblings().removeClass('active')
     .closest('div.tabs').find('div.tabs__content').fadeOut().removeClass('active').eq($(this).index()).fadeIn();
-  setTimeout(function() {
-    spaceSlider.update();
-  }, 500);
+  // setTimeout(function() {
+  //   spaceSlider.update();
+  // }, 500);
+  $(window).trigger('resize');
 });
+
+// setInterval(function() {
+//   spaceSlider.reInit();
+// }, 500);
+
+
+
+
+
 //team
 
 var teamSwiper = new Swiper('.swiper-team', {
