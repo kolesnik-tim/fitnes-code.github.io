@@ -128,7 +128,6 @@ teamSwiper.on('reachBeginning', function() {
 $('.swiper-team a[rel]').click(function(event) {
   let slidePrev = $(this).closest('.swiper-slide').hasClass('prev');
   let slideNext = $(this).closest('.swiper-slide').hasClass('next');
-  console.log('mkl');
   if(slidePrev) {
     teamSwiper.slidePrev();
     return false;
