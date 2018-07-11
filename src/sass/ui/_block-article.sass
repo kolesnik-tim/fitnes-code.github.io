@@ -57,8 +57,6 @@
         transform: scale(1.1)
         &:before
           opacity: 1
-      a.btn
-        opacity: 1
   &-left
     left: -40px
     border-bottom-right-radius: 90px
@@ -84,6 +82,7 @@
     z-index: 3
     max-width: 350px
     position: relative
+    width: 100%
     +r(1024)
       padding: 20px
       max-width: 100%
@@ -95,6 +94,7 @@
       line-height: 1.15
       letter-spacing: 0.5px
       margin-bottom: 35px
+      color: $white
       a
         color: $white
     p
@@ -154,9 +154,8 @@
     h4
       text-align: center
       transition: all 0.3s
-      a
-        color: $black
-        font-size: 40px
+      color: $black
+      font-size: 40px
     &:hover
       h4
         opacity: 0

@@ -49,10 +49,11 @@
     content: ''
     position: absolute
     bottom: 0
-    width: 700px
-    height: 90px
-    background: $white
-    clip-path: polygon(0 0%, 0% 0, 100% 100%, 0 100%)
+    width: 0px
+    height: 0px
+    background: transparent
+    border-left: 700px solid $white
+    border-top: 90px solid transparent
     +r(767)
       display: none
   p
@@ -111,6 +112,8 @@
   overflow: hidden
   +r(767)
     padding-top: 50px
+    .wow
+      animation-name: q !important
   &__block
     margin-bottom: 140px
     margin-top: 50px

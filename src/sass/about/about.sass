@@ -50,10 +50,11 @@
       content: ''
       position: absolute
       bottom: 0
-      width: 700px
-      height: 90px
-      background: $white
-      clip-path: polygon(0 0%, 0% 0, 100% 100%, 0 100%)
+      width: 0px
+      height: 0px
+      background: transparent
+      border-left: 700px solid $white
+      border-top: 90px solid transparent
       +r(767)
         display: none
     h2
@@ -90,7 +91,7 @@
         position: relative
         left: 50%
         top: 50%
-        transform: translate(-50%, -50%) skewX(-11deg)
+        transform: translate(-50%, -50%) skewX(0deg)
         width: 88%
       a
         transform: skewX(11deg)
@@ -98,6 +99,8 @@
         width: 100%
         display: block
         position: relative
+        +r(767)
+          transform: none
         img
           width: 110%
           position: relative
