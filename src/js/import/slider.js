@@ -19,6 +19,34 @@ $('.owl-carousel-2').owlCarousel({
   thumbsPrerendered: true
 });
 
+
+
+
+var spaceSlider = new Swiper('.slider-space', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  observer: true,
+  observeParents: true,
+  slidesPerColumn: 1,
+  // loop: true,
+  navigation: {
+    nextEl: '.swiper-space-right',
+    prevEl: '.swiper-space-left',
+  },
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      centeredSlides: true,
+      loop: true,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
+});
+
 var spaceSlider = new Swiper('.swiper-space', {
   slidesPerView: 4,
   spaceBetween: 30,
@@ -44,7 +72,9 @@ var spaceSlider = new Swiper('.swiper-space', {
   }
 });
 
-$('.swiper-slide-active').addClass('active');
+$('.swiper-slide-active').each(function() {
+  $(this).addClass('active');
+});
 $('.owl-thumb-item').on('click', function() {
   let btn = $(this);
   setTimeout(function() {
@@ -59,6 +89,12 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
   $(this)
     .addClass('active').siblings().removeClass('active')
     .closest('div.tabs').find('div.tabs__content').fadeOut().removeClass('active').eq($(this).index()).fadeIn();
+  setTimeout(function() {
+    $('.owl-thumb-item').removeClass('active');
+    $('.swiper-slide-active').each(function() {
+      $(this).addClass('active');
+    });
+  }, 500);
 });
 
 
