@@ -3,6 +3,17 @@ import Swiper from 'swiper';
 import teamSwiper from './slider';
 import '../lib/selectize.min';
 
+
+//якорь
+$('.value').on('click', function(event) {
+  event.preventDefault();
+  var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top - 100}, 1500);
+});
+
+
+
 //wow
 new WOW().init();
 
