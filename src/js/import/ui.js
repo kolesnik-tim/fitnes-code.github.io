@@ -123,7 +123,7 @@ if(window.location.pathname === '/') {
   });
 }
 
-//modal
+// modal
 teamSwiper.on('slideChange', function() {
   $('.swiper-team .swiper-slide').removeClass('prev');
   $('.swiper-team .swiper-slide').removeClass('next');
@@ -132,11 +132,11 @@ teamSwiper.on('slideChange', function() {
     $('.swiper-team .swiper-slide-active').next().next().next().addClass('next');
   }, 10);
 });
-teamSwiper.on('reachBeginning', function() {
-  teamSwiper.update();
-});
+// teamSwiper.on('reachBeginning', function() {
+//   teamSwiper.update();
+// });
 
-$('.swiper-team a[rel]').click(function(event) {
+$('.team__block a').click(function(event) {
   let slidePrev = $(this).closest('.swiper-slide').hasClass('prev');
   let slideNext = $(this).closest('.swiper-slide').hasClass('next');
   if(slidePrev) {

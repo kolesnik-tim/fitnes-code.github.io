@@ -105,7 +105,8 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 var teamSwiper = new Swiper('.swiper-team', {
   slidesPerView: 3,
   spaceBetween: 30,
-  // loop: true,
+  centeredSlides: true,
+  loop: true,
   on: {
     init: function() {
       $('.swiper-team .swiper-slide-active').prev().addClass('prev');
@@ -138,7 +139,6 @@ teamSwiper2.on('reachBeginning', function() {
 $('.swiper-team-page a[rel]').click(function(event) {
   let slidePrev1 = $(this).closest('.swiper-slide').hasClass('swiper-slide-prev');
   let slideNext1 = $(this).closest('.swiper-slide').hasClass('swiper-slide-next');
-  console.log('dfdg');
   if(slidePrev1) {
     teamSwiper2.slidePrev();
     return false;

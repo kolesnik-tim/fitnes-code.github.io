@@ -38,10 +38,20 @@
       transform: none
   .swiper
     position: relative
+    width: 140%
+    margin-left: -180px
+    overflow: hidden
+    +r(1024)
+      width: 100%
+      margin-left: 0
     &-container
       overflow: visible
+      width: 920px
+      margin-left: -130px
       +r(1024)
+        width: 100%
         overflow: hidden
+        margin-left: 0
       .swiper-slide.next, .swiper-slide.prev
         opacity: 0.4
         +r(1024)
