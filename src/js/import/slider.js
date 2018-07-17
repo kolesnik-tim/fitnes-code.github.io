@@ -154,6 +154,7 @@ $('.swiper-team-page a[rel]').click(function(event) {
 
 //club-tour
 var swiperIntro = new Swiper('.swiper-club-tour', {
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
