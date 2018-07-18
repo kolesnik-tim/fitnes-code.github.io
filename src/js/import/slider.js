@@ -12,40 +12,25 @@ var swiperIntro = new Swiper('.swiper-intro', {
 
 //space
 
+if($(window).width() < 767) {
+  var owl = $('.owl-carousel-2').owlCarousel({
+    items:1,
+    loop:true,
+    thumbs: true,
+    thumbsPrerendered: true,
+    onDragged: callback
+  });
+} else {
+  var owl = $('.owl-carousel-2').owlCarousel({
+    items:1,
+    thumbs: true,
+    thumbsPrerendered: true,
+  });
+}
 
-$('.owl-carousel-2').owlCarousel({
-  items:1,
-  thumbs: true,
-  thumbsPrerendered: true
-});
 
 
 
-
-var spaceSlider = new Swiper('.slider-space', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  observer: true,
-  observeParents: true,
-  slidesPerColumn: 1,
-  // loop: true,
-  navigation: {
-    nextEl: '.swiper-space-right',
-    prevEl: '.swiper-space-left',
-  },
-  breakpoints: {
-    767: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-      centeredSlides: true,
-      loop: true,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    }
-  }
-});
 
 var spaceSlider = new Swiper('.swiper-space', {
   slidesPerView: 4,
@@ -71,6 +56,31 @@ var spaceSlider = new Swiper('.swiper-space', {
     }
   }
 });
+
+
+
+var indexOwl;
+var indexSwiper = spaceSlider.realIndex;
+function callback(event) {
+  indexOwl = event.page.index;
+}
+
+spaceSlider.on('transitionEnd', function() {
+  spaceSlider.slideToLoop(index, speed, runCallbacks);
+  console.log(index);
+});
+owl.on('dragged.owl.carousel', function(event) {
+  console.log(indexSwiper);
+});
+
+
+
+
+
+
+
+
+
 
 $('.swiper-slide-active').each(function() {
   $(this).addClass('active');
