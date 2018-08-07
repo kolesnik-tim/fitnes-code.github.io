@@ -33,6 +33,9 @@
     margin-top: 50px
     +r(1100)
       padding-left: 60px
+    .schedule_day
+      height: 111px
+      width: 100%
     b
       font-family: 'SF Pro Text'
       font-size: 18px
@@ -47,30 +50,6 @@
       display: block
       +r(1100)
         left: 5px
-      &:nth-of-type(1)
-        top: 115px
-      &:nth-of-type(2)
-        top: 270px
-      &:nth-of-type(3)
-        top: 420px
-      &:nth-of-type(4)
-        top: 570px
-      &:nth-of-type(5)
-        top: 720px
-      &:nth-of-type(6)
-        top: 870px
-      &:nth-of-type(7)
-        top: 1020px
-      &:nth-of-type(8)
-        top: 1170px
-      &:nth-of-type(9)
-        top: 1320px
-      &:nth-of-type(10)
-        top: 1470px
-      &:nth-of-type(11)
-        top: 1620px
-      &:nth-of-type(12)
-        top: 1770px
     &__icon
       display: flex
       justify-content: flex-end
@@ -105,6 +84,14 @@
         border-bottom: solid 1px $pale-olive
         &.active
           background: rgba($apple, 0.1)
+        &.fixed
+          position: fixed
+          z-index: 99
+          background-image: url('../img/bg_all.png')
+          background-position: 50% 0
+          padding: 35px 18px
+        &.active.fixed
+          background: rgb(38, 46, 32)
         p
           font-family: 'SF Pro Text'
           font-size: 14px

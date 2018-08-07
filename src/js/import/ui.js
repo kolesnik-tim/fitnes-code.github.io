@@ -14,6 +14,7 @@ $('.value').on('click', function(event) {
 
 
 
+
 //wow
 new WOW().init();
 
@@ -170,3 +171,25 @@ function active(crr) {
   crr.addClass('active');
   crr.next('.space__floor__block').slideDown();
 }
+
+
+//расписание
+
+$('.schedule__slider__block__day');
+let offsetTop = $('.schedule__slider').offset().top;
+$(window).on('scroll', function() {
+  console.log(offsetTop);
+  let scrollTop = $('html, body').scrollTop();
+  if(scrollTop + 100 >= offsetTop) {
+    $('.schedule__slider__block__day').addClass('fixed');
+    $('.schedule__slider__block__day').css({'top' : scrollTop - offsetTop + 100});
+  } else {
+    $('.schedule__slider__block__day').removeClass('fixed');
+  }
+});
+
+let top = 120;
+$('.schedule__slider b').each(function() {
+  $(this).css({'top' : top});
+  top += 150;
+});
