@@ -177,12 +177,13 @@ function active(crr) {
 
 $('.schedule__slider__block__day');
 let offsetTop = $('.schedule__slider').offset().top;
+let headerHeight = $('.header').height();
 $(window).on('scroll', function() {
   console.log(offsetTop);
   let scrollTop = $('html, body').scrollTop();
   if(scrollTop + 100 >= offsetTop) {
     $('.schedule__slider__block__day').addClass('fixed');
-    $('.schedule__slider__block__day').css({'top' : scrollTop - offsetTop + 100});
+    $('.schedule__slider__block__day').css({'top' : scrollTop - offsetTop + headerHeight});
   } else {
     $('.schedule__slider__block__day').removeClass('fixed');
   }
