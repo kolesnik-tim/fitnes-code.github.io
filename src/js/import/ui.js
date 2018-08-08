@@ -194,7 +194,7 @@ $('.schedule__slider b').each(function() {
   let swiperWidth = $('.swiper-schedule').width() + 92;
   $('.schedule__slider__b').css({'width' : swiperWidth});
   if($(this).is('[rel]')) {
-    let rel = $(this).attr('rel') * 151;
+    let rel = $(this).attr('rel') * 150.5;
     $(this).css({'height' : rel});
     let cardschedule = $(this).attr('rel') * 151 - 151;
     $(this).css({'top' : top});
