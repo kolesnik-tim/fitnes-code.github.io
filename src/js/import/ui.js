@@ -179,7 +179,6 @@ $('.schedule__slider__block__day');
 let offsetTop = $('.schedule__slider').offset().top;
 let headerHeight = $('.header').height();
 $(window).on('scroll', function() {
-  console.log(offsetTop);
   let scrollTop = $('html, body').scrollTop();
   if(scrollTop + 100 >= offsetTop) {
     $('.schedule__slider__block__day').addClass('fixed');
@@ -190,7 +189,19 @@ $(window).on('scroll', function() {
 });
 
 let top = 120;
+let cardschedule = $();
 $('.schedule__slider b').each(function() {
-  $(this).css({'top' : top});
-  top += 150;
+  let swiperWidth = $('.swiper-schedule').width() + 92;
+  $('.schedule__slider__b').css({'width' : swiperWidth});
+  if($(this).is('[rel]')) {
+    let rel = $(this).attr('rel') * 151;
+    $(this).css({'height' : rel});
+    let cardschedule = $(this).attr('rel') * 151 - 151;
+    $(this).css({'top' : top});
+    top += cardschedule;
+    $(this).next().css({'top' : top});
+  } else {
+    $(this).css({'top' : top});
+  }
+  top += 151;
 });

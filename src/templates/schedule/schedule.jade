@@ -32,13 +32,17 @@
             option(value="4") 17:00
       .schedule__slider
         b 8:00
+        b(rel="2") 10:00
+          .schedule__slider__b
+        b 13:00
+        b(rel="2") 17:00
+          .schedule__slider__b
         b 10:00
         b 13:00
-        b 17:00
-        b 10:00
-        b 13:00
+          .schedule__slider__b
         b 17:00
         b 17:00
+          .schedule__slider__b
         .container
           .swiper-container.swiper-schedule
             .swiper-wrapper
@@ -46,17 +50,18 @@
                 .schedule_day
                   .schedule__slider__block__day.active
                     p 14 июня, Четверг
-                a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__morning.pool
-                  .schedule__slider__block__text
-                    h3 AQUA START
-                    span Бассейн
-                  .schedule__slider__icon
-                    i.icon.icon-usd-wt
-                    i.icon.icon-note-wt
-                a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__dinner.cave
-                  .schedule__slider__block__text
-                    h3 BODYFLEX
-                    span Соляная пещера
+                .schedule__slider__block__bg
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__morning.pool
+                    .schedule__slider__block__text
+                      h3 AQUA START
+                      span Бассейн
+                    .schedule__slider__icon
+                      i.icon.icon-usd-wt
+                      i.icon.icon-note-wt
+                  a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__dinner.cave
+                    .schedule__slider__block__text
+                      h3 BODYFLEX
+                      span Соляная пещера
                 a(href="#pop-up-schedule-1" rel="modal:open").schedule__slider__block.schedule__slider__block__evening.realryder
                   .schedule__slider__block__text
                     h3 REALRYDE
