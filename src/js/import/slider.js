@@ -2,6 +2,25 @@ import Swiper from 'swiper';
 import 'owl.carousel';
 import 'owl.carousel2.thumbs';
 
+
+$('.owl-gallery').owlCarousel({
+  margin:5,
+  autoWidth:true,
+  items:9
+});
+
+
+
+var servisesCardSlider = new Swiper('.swiper-servises-card', {
+  slidesPerView: 7,
+  spaceBetween: 5,
+  navigation: {
+    nextEl: '.swiper-space-right',
+    prevEl: '.swiper-space-left',
+  },
+});
+
+
 //intro
 var swiperIntro = new Swiper('.swiper-intro', {
   navigation: {

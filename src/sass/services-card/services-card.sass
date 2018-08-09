@@ -1,12 +1,32 @@
 .saline-room
-  padding: 70px 0
-  padding-bottom: 100px
-  background: url('../img/shutterstock-657941563.png') no-repeat
-  background-size: cover
-  background-attachment: fixed
-  +r(767)
-    padding-bottom: 30px
-    padding-top: 0
+  &__content
+    padding: 70px 0
+    padding-bottom: 100px
+    background: url('../img/shutterstock-657941563.png') no-repeat
+    background-size: cover
+    background-attachment: fixed
+    +r(767)
+      padding-bottom: 30px
+      padding-top: 0
+  &__gallery
+    background: repeating-linear-gradient(to right,rgba(255, 255, 255, 0.02) 0%,rgba(255, 255, 255, 0.1) 50%,rgba(255, 255, 255, 0.02) 100%)
+  .owl-gallery
+    height: 105px
+    .owl-stage-outer, .owl-stage, .owl-item
+      height: 100%
+    .item
+      overflow: hidden
+      &:before
+        content: ''
+        width: 100%
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 10px
+        background: $apple
+      img
+        height: 100%
+        width: auto
   &__title
     +r(767)
       padding-top: 1px

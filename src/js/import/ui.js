@@ -174,24 +174,23 @@ function active(crr) {
 
 
 //расписание
-
-$('.schedule__slider__block__day');
-let offsetTop = $('.schedule__slider').offset().top;
-let headerHeight = $('.header').height();
-$(window).on('scroll', function() {
-  let scrollTop = $('html, body').scrollTop();
-  if(scrollTop + 100 >= offsetTop) {
-    $('.schedule__slider__block__day').addClass('fixed');
-    $('.swiper-button-prev, .swiper-button-next').css({'top' : scrollTop - offsetTop + headerHeight + 70});
-    $('.schedule__slider__block__day').css({'top' : scrollTop - offsetTop + headerHeight});
-  } else {
-    $('.swiper-button-prev, .swiper-button-next').css({'top' : '70px'});
-    $('.schedule__slider__block__day').removeClass('fixed');
-  }
-});
-
+if(!$('.schedule__slider')) {
+  $('.schedule__slider__block__day');
+  let offsetTop = $('.schedule__slider').offset().top;
+  let headerHeight = $('.header').height();
+  $(window).on('scroll', function() {
+    let scrollTop = $('html, body').scrollTop();
+    if(scrollTop + 100 >= offsetTop) {
+      $('.schedule__slider__block__day').addClass('fixed');
+      $('.swiper-button-prev, .swiper-button-next').css({'top' : scrollTop - offsetTop + headerHeight + 70});
+      $('.schedule__slider__block__day').css({'top' : scrollTop - offsetTop + headerHeight});
+    } else {
+      $('.swiper-button-prev, .swiper-button-next').css({'top' : '70px'});
+      $('.schedule__slider__block__day').removeClass('fixed');
+    }
+  });
+}
 let top = 120;
-let cardschedule = $();
 $('.schedule__slider b').each(function() {
   let swiperWidth = $('.swiper-schedule').width() + 92;
   $('.schedule__slider__b').css({'width' : swiperWidth});
