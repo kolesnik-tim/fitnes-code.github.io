@@ -10,10 +10,34 @@
       padding-top: 0
   &__gallery
     background: repeating-linear-gradient(to right,rgba(255, 255, 255, 0.02) 0%,rgba(255, 255, 255, 0.1) 50%,rgba(255, 255, 255, 0.02) 100%)
+  .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot
+    font: status-bar 
   .owl-gallery
     height: 105px
     .owl-stage-outer, .owl-stage, .owl-item
       height: 100%
+    .owl-prev span, .owl-next span
+      position: relative
+      +center
+      color: transparent
+      &:before
+        content: $icon-left
+        position: absolute
+        font-family: 'iconfont'
+        color: $apple
+        font-size: 40px
+    .owl-next 
+      position: absolute
+      right: -40px
+      top: 50%
+      transform: translate(0, -50%)
+      span:before
+        transform: rotate(180deg)
+    .owl-prev
+      position: absolute
+      left: -40px
+      top: 50%
+      transform: translate(0, -50%)
     .item
       overflow: hidden
       &:before

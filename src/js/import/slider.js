@@ -6,7 +6,8 @@ import 'owl.carousel2.thumbs';
 $('.owl-gallery').owlCarousel({
   margin:5,
   autoWidth:true,
-  items:9
+  items:9,
+  nav:true
 });
 
 
