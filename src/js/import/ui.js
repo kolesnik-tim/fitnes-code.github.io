@@ -174,7 +174,8 @@ function active(crr) {
 
 
 //расписание
-if(!$('.schedule__slider')) {
+if(typeof $('.schedule__slider') === undefined) {
+} else{
   $('.schedule__slider__block__day');
   let offsetTop = $('.schedule__slider').offset().top;
   let headerHeight = $('.header').height();
