@@ -177,7 +177,10 @@ function active(crr) {
 if(typeof $('.schedule__slider') === undefined) {
 } else{
   $('.schedule__slider__block__day');
-  let offsetTop = $('.schedule__slider').offset().top;
+  if ($('.schedule__slider').length) {
+    var offsetTop = $('.schedule__slider').offset().top;  
+  }
+  
   let headerHeight = $('.header').height();
   $(window).on('scroll', function() {
     let scrollTop = $('html, body').scrollTop();

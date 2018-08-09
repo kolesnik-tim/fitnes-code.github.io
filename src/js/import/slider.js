@@ -78,19 +78,19 @@ var spaceSlider = new Swiper('.swiper-space', {
 
 
 
-var indexOwl;
-var indexSwiper = spaceSlider.realIndex;
-function callback(event) {
-  indexOwl = event.page.index;
-}
+// var indexOwl;
+// var indexSwiper = spaceSlider.realIndex;
+// function callback(event) {
+//   indexOwl = event.page.index;
+// }
 
-spaceSlider.on('transitionEnd', function() {
-  spaceSlider.slideToLoop(index, speed, runCallbacks);
-  console.log(index);
-});
-owl.on('dragged.owl.carousel', function(event) {
-  console.log(indexSwiper);
-});
+// spaceSlider.on('transitionEnd', function() {
+//   spaceSlider.slideToLoop(index, speed, runCallbacks);
+//   console.log(index);
+// });
+// owl.on('dragged.owl.carousel', function(event) {
+//   console.log(indexSwiper);
+// });
 
 
 
