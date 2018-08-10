@@ -38,7 +38,6 @@ if($(window).width() < 767) {
     loop:true,
     thumbs: true,
     thumbsPrerendered: true,
-    onDragged: callback
   });
 } else {
   var owl = $('.owl-carousel-2').owlCarousel({
