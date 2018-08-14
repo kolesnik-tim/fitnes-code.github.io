@@ -3,15 +3,17 @@ import 'owl.carousel';
 import 'owl.carousel2.thumbs';
 
 
-var $owl = $('.owl-gallery').owlCarousel({
-  margin:5,
-  autoWidth:true,
-  items:9,
-  nav:true
-});
+setTimeout(function() {
+  var $owl = $('.owl-gallery').owlCarousel({
+    margin:5,
+    autoWidth:true,
+    items:9,
+    nav:true
+  });
 
-$owl.trigger('refresh.owl.carousel');
+  $owl.trigger('refresh.owl.carousel');
 
+}, 500);
 
 
 
