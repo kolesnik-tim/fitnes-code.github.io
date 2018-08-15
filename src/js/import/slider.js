@@ -4,15 +4,12 @@ import 'owl.carousel2.thumbs';
 
 
 setTimeout(function() {
-  var $owl = $('.owl-gallery').owlCarousel({
-    margin:5,
+  $('.owl-gallery').owlCarousel({
+    margin:4,
     autoWidth:true,
-    items:9,
+    items:5,
     nav:true
   });
-
-  $owl.trigger('refresh.owl.carousel');
-
 }, 500);
 
 
