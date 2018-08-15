@@ -7,7 +7,6 @@ setTimeout(function() {
   $('.owl-gallery').owlCarousel({
     margin:4,
     autoWidth:true,
-    items:5,
     nav:true
   });
 }, 500);

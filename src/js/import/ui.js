@@ -4,6 +4,15 @@ import teamSwiper from './slider';
 import '../lib/selectize.min';
 import '@fancyapps/fancybox';
 
+ 
+$('[data-fancybox]').fancybox({
+  buttons: [
+    'thumbs',
+    'close'
+  ],
+});
+
+
 
 //якорь
 $('.value').on('click', function(event) {
