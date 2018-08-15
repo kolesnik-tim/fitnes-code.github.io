@@ -3,6 +3,11 @@ import Swiper from 'swiper';
 import teamSwiper from './slider';
 import '../lib/selectize.min';
 import '@fancyapps/fancybox';
+import objectFitImages from 'object-fit-images';
+
+
+
+objectFitImages();
 
  
 $('[data-fancybox]').fancybox({
