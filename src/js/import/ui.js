@@ -193,16 +193,16 @@ if(typeof $('.schedule__slider') === undefined) {
 } else{
   $('.schedule__slider__block__day');
   if ($('.schedule__slider').length) {
-    var offsetTop = $('.schedule__slider').offset().top;  
+    var offsetTop1 = $('.schedule__slider').offset().top;  
   }
   
   let headerHeight = $('.header').height();
   $(window).on('scroll', function() {
-    let scrollTop = $('html, body').scrollTop();
-    if(scrollTop + 100 >= offsetTop) {
+    let scrollTop1 = $(window).scrollTop();
+    if(scrollTop1 + 100 >= offsetTop1) {
       $('.schedule__slider__block__day').addClass('fixed');
-      $('.swiper-button-prev, .swiper-button-next').css({'top' : scrollTop - offsetTop + headerHeight + 70});
-      $('.schedule__slider__block__day').css({'top' : scrollTop - offsetTop + headerHeight});
+      $('.swiper-button-prev, .swiper-button-next').css({'top' : scrollTop1 - offsetTop1 + headerHeight + 70});
+      $('.schedule__slider__block__day').css({'top' : scrollTop1 - offsetTop1 + headerHeight});
     } else {
       $('.swiper-button-prev, .swiper-button-next').css({'top' : '70px'});
       $('.schedule__slider__block__day').removeClass('fixed');
