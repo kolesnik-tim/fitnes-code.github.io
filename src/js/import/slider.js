@@ -67,8 +67,7 @@ var spaceSlider = new Swiper('.swiper-space', {
     767: {
       slidesPerView: 2,
       spaceBetween: 10,
-      centeredSlides: true,
-      loop: false,
+      centeredSlides: true
     },
     1024: {
       slidesPerView: 3,
